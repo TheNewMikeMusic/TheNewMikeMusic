@@ -15,18 +15,25 @@ E-commerce / Marketplaces / Exchanges / Payments
 
 ### Codebase Stats
 <!-- LOC_START -->
-Expected to scan: **8 languages**
-Total Lines of Code: **29,882**
-Last Updated: 2026-01-05 07:53:54 UTC
+Repos scanned: **2**
+Total Lines of Code: **29,945**
+Last Updated: 2026-01-05 08:01:11 UTC
 
+#### Top Languages
 | Language | Code Lines |
 | :--- | :--- |
 | JSON | 15,322 |
 | TypeScript | 12,636 |
 | JavaScript | 745 |
-| Markdown | 553 |
+| Markdown | 565 |
 | CSS | 492 |
-| Python | 108 |
+| Python | 159 |
 | SVG | 22 |
 | Text | 4 |
+
+#### Top Repositories
+| Repository | Code Lines |
+| :--- | :--- |
+| TheNewMikeMusic/xfinds-cross-border-freight-comparison | 29,763 |
+| TheNewMikeMusic/TheNewMikeMusic | 182 |
 <!-- LOC_END -->
