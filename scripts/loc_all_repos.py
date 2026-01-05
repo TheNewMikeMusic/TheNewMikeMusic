@@ -4,121 +4,174 @@ import subprocess
 import json
 import time
 
-OWNER = "TheNewMikeMusic"
+# Configuration from Environment Variables or Defaults
+OWNER = os.environ.get("GITHUB_OWNER", "TheNewMikeMusic")
+INCLUDE_FORKS = os.environ.get("INCLUDE_FORKS", "false").lower() == "true"
+ORGS = os.environ.get("ORGS", "")  # Comma separated list of orgs
+EXCLUDE_REPOS = os.environ.get("EXCLUDE_REPOS", "") # Comma separated list of repo names to exclude
+
 CACHE_DIR = ".repos_cache"
 LOC_START_MARKER = "<!-- LOC_START -->"
 LOC_END_MARKER = "<!-- LOC_END -->"
 README_FILE = "README.md"
-EXCLUDES = "--exclude-dir=node_modules,dist,build,.next,.git,.github,coverage,venv,.venv,target,out"
+# Standard excludes + others mentioned
+EXCLUDES = "--exclude-dir=node_modules,dist,build,.next,.turbo,.git,.github,coverage,venv,.venv,target,out,.vercel,.idea,.vscode"
 
-def run_command(cmd, cwd=None):
-    result = subprocess.run(cmd, shell=True, cwd=cwd, text=True, capture_output=True)
+def run_command(cmd, cwd=None, env=None):
+    # Pass current env (which includes GH_TOKEN) plus any overrides
+    environ = os.environ.copy()
+    if env:
+        environ.update(env)
+        
+    result = subprocess.run(cmd, shell=True, cwd=cwd, text=True, capture_output=True, env=environ)
     if result.returncode != 0:
         print(f"Error running command: {cmd}")
         print(result.stderr)
         return None
     return result.stdout.strip()
 
-def get_repos():
-    print("Fetching repository list...")
-    # Get list of repos
-    cmd = f'gh repo list {OWNER} -L 200 --json name,sshUrl,isFork,isArchived,defaultBranchRef'
+def get_repos_from_source(source_name, is_org=False):
+    print(f"Fetching repositories for {source_name}...")
+    limit = 1000
+    # Include private repos by default with gh cli if token has access
+    cmd = f'gh repo list {source_name} -L {limit} --json name,sshUrl,url,isFork,isArchived,visibility,owner'
     output = run_command(cmd)
     if not output:
         return []
+    return json.loads(output)
+
+def get_all_repos():
+    all_repos = []
     
-    repos = json.loads(output)
+    # 1. Get Owner Repos
+    owner_repos = get_repos_from_source(OWNER)
+    all_repos.extend(owner_repos)
+    
+    # 2. Get Org Repos if defined
+    if ORGS:
+        org_list = [o.strip() for o in ORGS.split(",") if o.strip()]
+        for org in org_list:
+            org_repos = get_repos_from_source(org, is_org=True)
+            all_repos.extend(org_repos)
+            
+    # Filter Repos
+    excluded_names = [r.strip() for r in EXCLUDE_REPOS.split(",") if r.strip()]
     filtered_repos = []
     
-    for repo in repos:
-        if repo.get('isFork', False) or repo.get('isArchived', False):
+    print(f"\nScanning {len(all_repos)} total candidates...")
+    
+    for repo in all_repos:
+        full_name = f"{repo['owner']['login']}/{repo['name']}"
+        
+        # Filter Archived
+        if repo.get('isArchived', False):
             continue
+            
+        # Filter Forks (unless opted in)
+        if repo.get('isFork', False) and not INCLUDE_FORKS:
+            continue
+            
+        # Filter Excluded Names
+        if repo['name'] in excluded_names or full_name in excluded_names:
+            print(f"Skipping excluded repo: {full_name}")
+            continue
+            
         filtered_repos.append(repo)
         
-    return filtered_repos
+    # Deduplicate just in case
+    unique_repos = {f"{r['owner']['login']}/{r['name']}": r for r in filtered_repos}.values()
+    return list(unique_repos)
 
 def clone_repos(repos):
     if os.path.exists(CACHE_DIR):
         shutil.rmtree(CACHE_DIR)
     os.makedirs(CACHE_DIR)
     
-    print(f"Cloning {len(repos)} repositories to {CACHE_DIR}...")
+    print(f"\nCloning {len(repos)} repositories to {CACHE_DIR}...")
     
     for repo in repos:
-        name = repo['name']
-        print(f"Cloning {name}...")
-        # Shallow clone single branch
-        cmd = f'gh repo clone {OWNER}/{name} {CACHE_DIR}/{name} -- --depth 1'
+        full_name = f"{repo['owner']['login']}/{repo['name']}"
+        clone_path = os.path.join(CACHE_DIR, repo['owner']['login'], repo['name']) # Organize by owner/name to avoid collision
+        
+        print(f"Cloning {full_name} ({repo['visibility']})...")
+        
+        # Use gh repo clone which handles authentication automatically via GH_TOKEN env
+        cmd = f'gh repo clone {full_name} "{clone_path}" -- --depth 1'
         run_command(cmd)
 
-def count_loc_global():
-    print("Counting global lines of code...")
-    cmd = f'cloc {CACHE_DIR} {EXCLUDES} --json'
-    output = run_command(cmd)
-    if not output:
-        return None
-    return json.loads(output)
-
 def count_loc_per_repo(repos):
-    print("Counting lines of code per repo...")
+    print("\nCounting lines of code per repo...")
     repo_stats = []
+    global_stats = {} # Aggregate manually to ensure alignment
+    
+    languages_agg = {}
+    total_code = 0
     
     for repo in repos:
-        name = repo['name']
-        repo_path = os.path.join(CACHE_DIR, name)
+        full_name = f"{repo['owner']['login']}/{repo['name']}"
+        repo_path = os.path.join(CACHE_DIR, repo['owner']['login'], repo['name'])
+        
         if not os.path.exists(repo_path):
+            print(f"Warning: Path not found for {full_name}")
             continue
             
-        cmd = f'cloc {repo_path} {EXCLUDES} --json'
+        cmd = f'cloc "{repo_path}" {EXCLUDES} --json'
         output = run_command(cmd)
+        
         if output:
             try:
                 stats = json.loads(output)
+                # Repo sum
                 code_lines = stats.get('SUM', {}).get('code', 0)
-                repo_stats.append({'name': name, 'code': code_lines})
-            except:
-                pass
+                repo_stats.append({'name': full_name, 'code': code_lines})
                 
-    return repo_stats
+                print(f"  -> {full_name}: {code_lines} lines")
+                total_code += code_lines
+                
+                # Aggregate languages
+                for lang, data in stats.items():
+                    if lang == 'header' or lang == 'SUM':
+                        continue
+                    if lang not in languages_agg:
+                        languages_agg[lang] = 0
+                    languages_agg[lang] += data['code']
+                    
+            except Exception as e:
+                print(f"Error parsing cloc output for {full_name}: {e}")
+    
+    return repo_stats, languages_agg, total_code
 
-def generate_markdown(global_stats, repo_stats, repo_count):
-    if not global_stats:
-        return "Could not calculate stats."
+def generate_markdown(repo_stats, languages_agg, total_code, repo_count):
     
-    sum_stats = global_stats.get('SUM', {})
-    total_lines = sum_stats.get('code', 0)
+    # Sort Languages
+    sorted_langs = sorted(languages_agg.items(), key=lambda x: x[1], reverse=True)[:10]
     
-    # Sort languages by code count
-    languages = []
-    for key, value in global_stats.items():
-        if key == 'header' or key == 'SUM':
-            continue
-        languages.append({'name': key, 'code': value['code']})
-    
-    languages.sort(key=lambda x: x['code'], reverse=True)
-    top_langs = languages[:10]
-    
-    # Sort repos by code count
-    repo_stats.sort(key=lambda x: x['code'], reverse=True)
-    top_repos = repo_stats[:10]
+    # Sort Repos
+    sorted_repos = sorted(repo_stats, key=lambda x: x['code'], reverse=True)[:10]
     
     md_lines = []
-    md_lines.append(f"Repos scanned: **{repo_count}**")
-    md_lines.append(f"Total Lines of Code: **{total_lines:,}**")
+    
+    # 1. Overview
+    md_lines.append(f"Repos scanned: **{repo_count}**" + (" (including forks)" if INCLUDE_FORKS else ""))
+    md_lines.append(f"Total Lines of Code: **{total_code:,}**")
     md_lines.append(f"Last Updated: {time.strftime('%Y-%m-%d %H:%M:%S')} UTC")
     
     md_lines.append("")
+    
+    # 2. Top Languages
     md_lines.append("#### Top Languages")
     md_lines.append("| Language | Code Lines |")
     md_lines.append("| :--- | :--- |")
-    for lang in top_langs:
-        md_lines.append(f"| {lang['name']} | {lang['code']:,} |")
+    for lang, count in sorted_langs:
+        md_lines.append(f"| {lang} | {count:,} |")
 
     md_lines.append("")
+    
+    # 3. Top Repos
     md_lines.append("#### Top Repositories")
     md_lines.append("| Repository | Code Lines |")
     md_lines.append("| :--- | :--- |")
-    for repo in top_repos:
+    for repo in sorted_repos:
         md_lines.append(f"| {repo['name']} | {repo['code']:,} |")
         
     return "\n".join(md_lines)
@@ -146,28 +199,36 @@ def update_readme(content):
 
     with open(README_FILE, 'w', encoding='utf-8') as f:
         f.write(new_content)
-    print("README.md updated.")
+    print("README.md updated successfully.")
 
 def main():
-    repos = get_repos()
-    print(f"Found {len(repos)} repositories to scan.")
+    print(f"--- LOC Scan Started for {OWNER} ---")
+    print(f"Include Forks: {INCLUDE_FORKS}")
+    print(f"Orgs: {ORGS}")
     
+    repos = get_all_repos()
+    
+    repo_count = len(repos)
+    print(f"\nFinal list of repositories to scan ({repo_count}):")
+    for r in repos:
+        print(f" - {r['owner']['login']}/{r['name']} ({r['visibility']})")
+        
     if not repos:
-        print("No repositories found.")
+        print("No repositories found to scan.")
         return
 
     clone_repos(repos)
-    global_stats = count_loc_global()
-    repo_stats = count_loc_per_repo(repos)
+    repo_stats, languages_agg, total_code = count_loc_per_repo(repos)
     
-    if global_stats:
-        md_content = generate_markdown(global_stats, repo_stats, len(repos))
-        print("Generated Stats:")
-        print(md_content)
-        update_readme(md_content)
+    print(f"\n--- Scan Complete ---")
+    print(f"Total Lines: {total_code}")
+    
+    md_content = generate_markdown(repo_stats, languages_agg, total_code, repo_count)
+    update_readme(md_content)
         
     # Cleanup
     if os.path.exists(CACHE_DIR):
+        print("Cleaning up cache...")
         shutil.rmtree(CACHE_DIR)
 
 if __name__ == "__main__":

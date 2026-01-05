@@ -2,8 +2,14 @@ name: Update LOC Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every day at midnight UTC
+    - cron: "0 0 * * *" # Every day at midnight UTC
   workflow_dispatch:
+    inputs:
+      include_forks:
+        description: "Include forks"
+        required: false
+        default: "false"
+        type: boolean
 
 permissions:
   contents: write
@@ -21,12 +27,25 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Run LOC Script
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/loc_all_repos.py
+          GITHUB_OWNER: TheNewMikeMusic
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          # Fallback to GITHUB_TOKEN if GH_PAT is missing (though private repos won't work)
+          # Actually the script relies on GH_TOKEN env var for gh cli.
+          # If secrets.GH_PAT is empty, this might fail or fallback to empty string.
+          # PRO TIP: The script just needs A token. If user forgets PAT, public repos still work if we use GITHUB_TOKEN.
+          # But requirement says explicitly "Use PAT". Let's stick to PAT primarily but fail gracefully?
+          # User prompt: "GH_TOKEN=${{ secrets.GH_PAT }}"
+          INCLUDE_FORKS: ${{ inputs.include_forks || 'false' }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::warning::GH_PAT secret is not set. Falling back to GITHUB_TOKEN. Private repos will NOT be scanned."
+            export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          fi
+          python3 scripts/loc_all_repos.py
 
       - name: Commit and Push
         run: |
@@ -36,6 +55,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update code stats [skip ci]"
+            git commit -m "chore: update global LOC stats automation [skip ci]"
             git push
           fi
