@@ -156,19 +156,19 @@ def generate_markdown(repo_stats, languages_agg_total, global_total_loc, global_
     md.append("")
     
     # Compact Dashboard
-    md.append(f"**Repositories:** {scanned_count}  |  **Engineering LOC:** {global_eng_loc:,}  |  **Total Volume:** {global_total_loc:,}  |  **Sync:** {current_time} UTC")
+    md.append(f"**Repositories:** {scanned_count}  |  **Engineering LOC:** {global_eng_loc:,}  |  **Total LOC:** {global_total_loc:,} (incl config/data)  |  **Sync:** {current_time} UTC")
     md.append("")
     
-    # Language Distribution (Top 8)
+    # Language Distribution (Top 6 visible)
     md.append("#### Language Distribution")
-    md.append("| Language | Volume |")
+    md.append("| Language | LOC |")
     md.append("| :--- | :--- |")
-    for lang, count in sorted_langs[:8]:
+    for lang, count in sorted_langs[:6]:
         md.append(f"| {lang} | {count:,} |")
     
     # Top Repos (Top 5)
     md.append("\n#### Technical Depth by Repository")
-    md.append("| Repository | Engineering LOC | Total Volume |")
+    md.append("| Repository | Engineering LOC | Total LOC |")
     md.append("| :--- | :--- | :--- |")
     for repo in sorted_repos[:5]:
         md.append(f"| `{repo['name']}` | {repo['eng_code']:,} | {repo['total_code']:,} |")
@@ -177,13 +177,13 @@ def generate_markdown(repo_stats, languages_agg_total, global_total_loc, global_
     md.append("\n<details>")
     md.append("<summary>More details</summary>")
     md.append("\n#### Full Language Breakdown")
-    md.append("| Language | Volume |")
+    md.append("| Language | LOC |")
     md.append("| :--- | :--- |")
     for lang, count in sorted_langs:
         md.append(f"| {lang} | {count:,} |")
         
     md.append("\n#### Full Repository Index")
-    md.append("| Repository | Engineering LOC | Total Volume |")
+    md.append("| Repository | Engineering LOC | Total LOC |")
     md.append("| :--- | :--- | :--- |")
     for repo in sorted_repos:
         md.append(f"| `{repo['name']}` | {repo['eng_code']:,} | {repo['total_code']:,} |")
