@@ -19,22 +19,20 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 11  |  **Engineering LOC:** 203,754  |  **Total Volume:** 210,003  |  **Sync:** 2026-01-05 08:42 UTC
+**Repositories:** 11  |  **Engineering LOC:** 203,778  |  **Total LOC:** 210,027 (incl config/data)  |  **Sync:** 2026-01-05 08:48 UTC
 
 #### Language Distribution
-| Language | Volume |
+| Language | LOC |
 | :--- | :--- |
 | TypeScript | 138,352 |
-| Markdown | 28,278 |
+| Markdown | 28,302 |
 | CSS | 20,695 |
 | Bourne Shell | 8,439 |
 | JSON | 6,249 |
 | PowerShell | 2,985 |
-| JavaScript | 2,533 |
-| Python | 1,482 |
 
 #### Technical Depth by Repository
-| Repository | Engineering LOC | Total Volume |
+| Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,337 | 36,427 |
@@ -46,10 +44,10 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 <summary>More details</summary>
 
 #### Full Language Breakdown
-| Language | Volume |
+| Language | LOC |
 | :--- | :--- |
 | TypeScript | 138,352 |
-| Markdown | 28,278 |
+| Markdown | 28,302 |
 | CSS | 20,695 |
 | Bourne Shell | 8,439 |
 | JSON | 6,249 |
@@ -66,7 +64,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | TOML | 1 |
 
 #### Full Repository Index
-| Repository | Engineering LOC | Total Volume |
+| Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,337 | 36,427 |
@@ -78,6 +76,6 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Hotpot-Records` | 14,058 | 14,211 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `dance_parser` | 1,243 | 1,243 |
-| `TheNewMikeMusic` | 210 | 210 |
+| `TheNewMikeMusic` | 234 | 234 |
 </details>
 <!-- LOC_END -->
