@@ -15,5 +15,18 @@ E-commerce / Marketplaces / Exchanges / Payments
 
 ### Codebase Stats
 <!-- LOC_START -->
-(Updating...)
+Expected to scan: **8 languages**
+Total Lines of Code: **29,882**
+Last Updated: 2026-01-05 07:53:54 UTC
+
+| Language | Code Lines |
+| :--- | :--- |
+| JSON | 15,322 |
+| TypeScript | 12,636 |
+| JavaScript | 745 |
+| Markdown | 553 |
+| CSS | 492 |
+| Python | 108 |
+| SVG | 22 |
+| Text | 4 |
 <!-- LOC_END -->
