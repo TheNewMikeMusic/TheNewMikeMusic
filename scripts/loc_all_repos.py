@@ -9,50 +9,44 @@ import sys
 OWNER = os.environ.get("GITHUB_OWNER", "TheNewMikeMusic")
 INCLUDE_FORKS = os.environ.get("INCLUDE_FORKS", "false").lower() == "true"
 EXCLUDE_REPOS = os.environ.get("EXCLUDE_REPOS", "")
+INCLUDE_JSON_IN_ENG = os.environ.get("INCLUDE_JSON_IN_ENG", "false").lower() == "true"
+EXCLUDE_EXTS = os.environ.get("EXCLUDE_EXTS", "")
 
 CACHE_DIR = ".repos_cache"
 LOC_START_MARKER = "<!-- LOC_START -->"
 LOC_END_MARKER = "<!-- LOC_END -->"
 README_FILE = "README.md"
-EXCLUDES = "--exclude-dir=node_modules,dist,build,.next,.turbo,.git,.github,coverage,venv,.venv,target,out,.vercel,.idea,.vscode,bin,obj"
+
+# Standard noisy directories
+EXCLUDE_DIRS = "node_modules,dist,build,.next,.turbo,.git,.github,coverage,venv,.venv,target,out,.vercel,.idea,.vscode,bin,obj"
+# Standard lockfiles and noisy files to exclude from all counts
+EXCLUDE_FILES = "package-lock.json,yarn.lock,pnpm-lock.yaml,bun.lockb,composer.lock,Podfile.lock,mix.lock"
 
 def run_command(cmd, cwd=None, env=None):
     environ = os.environ.copy()
     if env:
         environ.update(env)
     
-    print(f"DEBUG: Running command: {cmd}")
-    # Capture output and suppress stderr unless error
     result = subprocess.run(cmd, shell=True, cwd=cwd, text=True, capture_output=True, env=environ)
     if result.returncode != 0:
-        print(f"ERROR: Command failed with exit code {result.returncode}")
-        print(f"ERROR STDERR: {result.stderr}")
         return None
     return result.stdout.strip()
 
 def get_all_repos():
-    print(f"Fetching all repositories...")
+    print(f"Fetching repository list for {OWNER}...")
     all_repos = []
     
     # Fetch Public
-    print("Fetching public repositories...")
-    cmd_public = f'gh repo list {OWNER} --visibility public -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
+    cmd_public = f'gh repo list {OWNER} --visibility public -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility'
     output_public = run_command(cmd_public)
     if output_public:
-        try:
-            all_repos.extend(json.loads(output_public))
-        except json.JSONDecodeError:
-            print("Error decoding JSON from public repos")
+        all_repos.extend(json.loads(output_public))
 
     # Fetch Private
-    print("Fetching private repositories...")
-    cmd_private = f'gh repo list {OWNER} --visibility private -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
+    cmd_private = f'gh repo list {OWNER} --visibility private -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility'
     output_private = run_command(cmd_private)
     if output_private:
-        try:
-            all_repos.extend(json.loads(output_private))
-        except json.JSONDecodeError:
-            print("Error decoding JSON from private repos")
+        all_repos.extend(json.loads(output_private))
             
     # Deduplicate
     seen = set()
@@ -61,29 +55,18 @@ def get_all_repos():
         if r['nameWithOwner'] not in seen:
             seen.add(r['nameWithOwner'])
             unique_repos.append(r)
-
-    if not unique_repos:
-        print("CRITICAL ERROR: Failed to fetch (or found zero) repositories. Check GH_PAT permissions.")
         
     return unique_repos
 
 def filter_repos(all_repos):
     excluded_names = [r.strip() for r in EXCLUDE_REPOS.split(",") if r.strip()]
     filtered_repos = []
-    print(f"\nTotal repos visible to token: {len(all_repos)}")
     
     for repo in all_repos:
         full_name = repo['nameWithOwner']
-        # Filter Archived
-        if repo.get('isArchived', False):
-            continue
-        # Filter Forks
-        if repo.get('isFork', False) and not INCLUDE_FORKS:
-            continue
-        # Filter Excluded Names
-        if repo['name'] in excluded_names or full_name in excluded_names:
-            print(f"Skipping excluded repo: {full_name}")
-            continue
+        if repo.get('isArchived', False): continue
+        if repo.get('isFork', False) and not INCLUDE_FORKS: continue
+        if repo['name'] in excluded_names or full_name in excluded_names: continue
         filtered_repos.append(repo)
     return filtered_repos
 
@@ -96,165 +79,151 @@ def clone_repos(repos):
         shutil.rmtree(CACHE_DIR)
     os.makedirs(CACHE_DIR)
     
-    print(f"\nCloning {len(repos)} repositories...")
-    
+    print(f"Cloning {len(repos)} repositories...")
     for repo in repos:
         full_name = repo['nameWithOwner']
         clone_path = get_safe_path(repo)
-        
-        print(f"Cloning {full_name} ({repo['visibility']})...")
         cmd = f'gh repo clone {full_name} "{clone_path}" -- --depth 1'
         run_command(cmd)
 
 def count_loc(repos):
-    print("\nCounting lines of code per repo...")
+    print("Analyzing code volume (Dual Metric)...")
     repo_stats = []
-    languages_agg = {}
-    total_code = 0
+    languages_agg_total = {}
+    languages_agg_eng = {}
+    global_total_loc = 0
+    global_eng_loc = 0
     
-    print(f"{'Repository':<40} | {'LOC':<10}")
-    print("-" * 55)
+    # Extension exclusions
+    user_exclude_exts = [e.strip() for e in EXCLUDE_EXTS.split(",") if e.strip()]
     
     for repo in repos:
         full_name = repo['nameWithOwner']
         repo_path = get_safe_path(repo)
-        
-        if not os.path.exists(repo_path):
-            continue
+        if not os.path.exists(repo_path): continue
             
-        cmd = f'cloc "{repo_path}" {EXCLUDES} --json'
-        output = run_command(cmd)
+        # Standard cloc command excluding noise
+        cloc_base = f'cloc "{repo_path}" --exclude-dir={EXCLUDE_DIRS} --not-match-f="({EXCLUDE_FILES.replace(",","|")})"'
+        
+        # User defined exts
+        if user_exclude_exts:
+            cloc_base += f' --exclude-ext={",".join(user_exclude_exts)}'
+
+        output = run_command(cloc_base + " --json")
         
         if output:
             try:
                 stats = json.loads(output)
-                code_lines = stats.get('SUM', {}).get('code', 0)
-                repo_stats.append({'name': full_name, 'code': code_lines})
+                repo_total = stats.get('SUM', {}).get('code', 0)
+                repo_eng = 0
                 
-                print(f"{full_name:<40} | {code_lines:<10}")
-                total_code += code_lines
-                
+                # Per-language breakdown for English LOC filtering
                 for lang, data in stats.items():
-                    if lang == 'header' or lang == 'SUM':
-                        continue
-                    if lang not in languages_agg:
-                        languages_agg[lang] = 0
-                    languages_agg[lang] += data['code']
+                    if lang in ['header', 'SUM']: continue
                     
-            except Exception as e:
-                print(f"Error parsing cloc output for {full_name}: {e}")
+                    code = data['code']
+                    # Total aggregating
+                    languages_agg_total[lang] = languages_agg_total.get(lang, 0) + code
+                    
+                    # Engineering Filter: Exclude JSON unless forced
+                    is_json = lang.lower() == 'json'
+                    if not is_json or INCLUDE_JSON_IN_ENG:
+                        repo_eng += code
+                        languages_agg_eng[lang] = languages_agg_eng.get(lang, 0) + code
                 
-    print("-" * 55)
-    print(f"{'TOTAL':<40} | {total_code:<10}")
-    return repo_stats, languages_agg, total_code
+                repo_stats.append({
+                    'name': repo['name'], 
+                    'eng_code': repo_eng, 
+                    'total_code': repo_total
+                })
+                global_total_loc += repo_total
+                global_eng_loc += repo_eng
+                
+            except: continue
+                
+    return repo_stats, languages_agg_total, global_total_loc, global_eng_loc
 
-def generate_markdown(repo_stats, languages_agg, total_code, visible_count, scanned_count):
-    # Sort Languages
-    sorted_langs = sorted(languages_agg.items(), key=lambda x: x[1], reverse=True)[:10]
-    # Sort Repos
-    sorted_repos = sorted(repo_stats, key=lambda x: x['code'], reverse=True)
+def generate_markdown(repo_stats, languages_agg_total, global_total_loc, global_eng_loc, scanned_count):
+    # Sort repos by Engineering LOC
+    sorted_repos = sorted(repo_stats, key=lambda x: x['eng_code'], reverse=True)
+    # Sort langs by Total LOC for the distribution
+    sorted_langs = sorted(languages_agg_total.items(), key=lambda x: x[1], reverse=True)
     
-    current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
+    current_time = time.strftime('%Y-%m-%d %H:%M', time.gmtime())
     
-    md_lines = []
+    md = []
+    md.append("LOC by cloc. Engineering LOC excludes lockfiles & generated assets.")
+    md.append("")
     
-    # 1. Minimalist Metric Summary
-    md_lines.append(f"**Repositories Scanned:** {scanned_count} | **Aggregate Lines of Code:** {total_code:,} | **Last Synchronized:** {current_time} UTC")
-    md_lines.append("")
+    # Compact Dashboard
+    md.append(f"**Repositories:** {scanned_count}  |  **Engineering LOC:** {global_eng_loc:,}  |  **Total Volume:** {global_total_loc:,}  |  **Sync:** {current_time} UTC")
+    md.append("")
     
-    # 2. Plain Top Languages Table
-    md_lines.append("#### Language Distribution")
-    md_lines.append("| Language | Lines of Code |")
-    md_lines.append("| :--- | :--- |")
+    # Language Distribution (Top 8)
+    md.append("#### Language Distribution")
+    md.append("| Language | Volume |")
+    md.append("| :--- | :--- |")
+    for lang, count in sorted_langs[:8]:
+        md.append(f"| {lang} | {count:,} |")
+    
+    # Top Repos (Top 5)
+    md.append("\n#### Technical Depth by Repository")
+    md.append("| Repository | Engineering LOC | Total Volume |")
+    md.append("| :--- | :--- | :--- |")
+    for repo in sorted_repos[:5]:
+        md.append(f"| `{repo['name']}` | {repo['eng_code']:,} | {repo['total_code']:,} |")
+    
+    # Collapsible Details
+    md.append("\n<details>")
+    md.append("<summary>More details</summary>")
+    md.append("\n#### Full Language Breakdown")
+    md.append("| Language | Volume |")
+    md.append("| :--- | :--- |")
     for lang, count in sorted_langs:
-        md_lines.append(f"| {lang} | {count:,} |")
-    md_lines.append("")
-    
-    # 3. Plain Top Repos (Show Top 5, hide rest)
-    md_lines.append("#### Top Repositories by Volume")
-    
-    top_5 = sorted_repos[:5]
-    md_lines.append("| Repository | Lines of Code |")
-    md_lines.append("| :--- | :--- |")
-    for repo in top_5:
-        md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
-    
-    if len(sorted_repos) > 5:
-        md_lines.append("")
-        md_lines.append("<details>")
-        md_lines.append("<summary>View full repository list</summary>")
-        md_lines.append("")
-        md_lines.append("| Repository | Lines of Code |")
-        md_lines.append("| :--- | :--- |")
-        for repo in sorted_repos[5:]:
-            md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
-        md_lines.append("")
-        md_lines.append("</details>")
+        md.append(f"| {lang} | {count:,} |")
         
-    return "\n".join(md_lines)
-
-def ensure_readme_structure():
-    if not os.path.exists(README_FILE):
-        return
-
-    with open(README_FILE, 'r', encoding='utf-8') as f:
-        content = f.read()
-        
-    if LOC_START_MARKER not in content:
-        print(f"Adding stats block to {README_FILE}...")
-        with open(README_FILE, 'a', encoding='utf-8') as f:
-            f.write("\n\n### Codebase Stats\n")
-            f.write(f"{LOC_START_MARKER}\n(Updating...)\n{LOC_END_MARKER}\n")
+    md.append("\n#### Full Repository Index")
+    md.append("| Repository | Engineering LOC | Total Volume |")
+    md.append("| :--- | :--- | :--- |")
+    for repo in sorted_repos:
+        md.append(f"| `{repo['name']}` | {repo['eng_code']:,} | {repo['total_code']:,} |")
+    
+    md.append("</details>")
+    
+    return "\n".join(md)
 
 def update_readme(content):
-    ensure_readme_structure()
-    if not os.path.exists(README_FILE):
-        print(f"{README_FILE} not found.")
-        return
+    if not os.path.exists(README_FILE): return
     with open(README_FILE, 'r', encoding='utf-8') as f:
-        readme_content = f.read()
-    start_idx = readme_content.find(LOC_START_MARKER)
-    end_idx = readme_content.find(LOC_END_MARKER)
-    if start_idx == -1 or end_idx == -1:
-        print("Markers not found in README.md")
-        return
-    new_content = (
-        readme_content[:start_idx + len(LOC_START_MARKER)] + "\n" +
+        readme = f.read()
+
+    start_idx = readme.find(LOC_START_MARKER)
+    end_idx = readme.find(LOC_END_MARKER)
+    if start_idx == -1 or end_idx == -1: return
+
+    new_readme = (
+        readme[:start_idx + len(LOC_START_MARKER)] + "\n" +
         content + "\n" +
-        readme_content[end_idx:]
+        readme[end_idx:]
     )
+
     with open(README_FILE, 'w', encoding='utf-8') as f:
-        f.write(new_content)
-    print("README.md updated successfully.")
+        f.write(new_readme)
 
 def main():
-    print(f"--- LOC Scan Started v4.1 (Minimalist Layout) ---")
-    print(f"Owner: {OWNER}")
-    
-    # 1. Get All Repos
+    print("--- LOC Intelligence v5.0 (Credible Metrics) ---")
     all_repos = get_all_repos()
-    visible_count = len(all_repos)
-    print(f"Successfully fetched {visible_count} repositories.")
-    
-    # 2. Filter
     repos = filter_repos(all_repos)
-    scanned_count = len(repos)
-    
     if not repos:
-        print("WARNING: No repositories found after filtering.")
-        if visible_count == 0:
-            print("CRITICAL: Token sees 0 repos. Check permissions.")
-            sys.exit(1)
+        print("No repositories found.")
+        sys.exit(0)
 
-    # 3. Clone & Count
     clone_repos(repos)
-    repo_stats, languages_agg, total_code = count_loc(repos)
+    repo_stats, languages_agg, total_loc, eng_loc = count_loc(repos)
     
-    # 4. Generate & Update
-    md_content = generate_markdown(repo_stats, languages_agg, total_code, visible_count, scanned_count)
+    md_content = generate_markdown(repo_stats, languages_agg, total_loc, eng_loc, len(repos))
     update_readme(md_content)
-        
-    # Cleanup
+    
     if os.path.exists(CACHE_DIR):
         shutil.rmtree(CACHE_DIR)
 
