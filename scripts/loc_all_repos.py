@@ -31,14 +31,43 @@ def run_command(cmd, cwd=None, env=None):
     return result.stdout.strip()
 
 def get_all_repos():
-    print(f"Fetching all repositories (visibility=all)...")
-    # Fetch all repos visible to the token (public + private)
-    cmd = f'gh repo list {OWNER} --visibility all -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
-    output = run_command(cmd)
-    if not output:
-        print("CRITICAL ERROR: Failed to fetch repository list. Check GH_PAT permissions.")
-        sys.exit(1) # Fail the workflow
-    return json.loads(output)
+    print(f"Fetching all repositories...")
+    all_repos = []
+    
+    # Fetch Public
+    print("Fetching public repositories...")
+    cmd_public = f'gh repo list {OWNER} --visibility public -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
+    output_public = run_command(cmd_public)
+    if output_public:
+        try:
+            all_repos.extend(json.loads(output_public))
+        except json.JSONDecodeError:
+            print("Error decoding JSON from public repos")
+
+    # Fetch Private
+    print("Fetching private repositories...")
+    cmd_private = f'gh repo list {OWNER} --visibility private -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
+    output_private = run_command(cmd_private)
+    if output_private:
+        try:
+            all_repos.extend(json.loads(output_private))
+        except json.JSONDecodeError:
+            print("Error decoding JSON from private repos")
+            
+    # Deduplicate (just in case repo appears in both or multiple calls confusingly)
+    seen = set()
+    unique_repos = []
+    for r in all_repos:
+        if r['nameWithOwner'] not in seen:
+            seen.add(r['nameWithOwner'])
+            unique_repos.append(r)
+
+    if not unique_repos:
+        print("CRITICAL ERROR: Failed to fetch (or found zero) repositories. Check GH_PAT permissions.")
+        # We don't exit here immediately to allow "0 repos" scenario if truly empty, 
+        # but combined with main() check it will handle it.
+        
+    return unique_repos
 
 def filter_repos(all_repos):
     excluded_names = [r.strip() for r in EXCLUDE_REPOS.split(",") if r.strip()]
@@ -185,7 +214,7 @@ def update_readme(content):
     print("README.md updated successfully.")
 
 def main():
-    print(f"--- LOC Scan Started v2.1 (Debug Mode) ---")
+    print(f"--- LOC Scan Started v2.2 (Fix Visibility Flag) ---")
     print(f"Owner: {OWNER}")
     
     # 1. Get All Repos
