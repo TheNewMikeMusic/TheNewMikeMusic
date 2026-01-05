@@ -210,7 +210,7 @@ def update_readme(content):
     print("README.md updated successfully.")
 
 def main():
-    print(f"--- LOC Scan Started ---")
+    print(f"--- LOC Scan Started v2.0 (Full Account) ---")
     print(f"Owner: {OWNER}")
     print(f"Include Forks: {INCLUDE_FORKS}")
     
