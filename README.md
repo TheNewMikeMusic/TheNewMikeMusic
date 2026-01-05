@@ -17,42 +17,67 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 
 ### Codebase Stats
 <!-- LOC_START -->
-**Repositories Scanned:** 11 | **Aggregate Lines of Code:** 279,978 | **Last Synchronized:** 2026-01-05 08:36:57 UTC
+LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
+
+**Repositories:** 11  |  **Engineering LOC:** 203,754  |  **Total Volume:** 210,003  |  **Sync:** 2026-01-05 08:42 UTC
 
 #### Language Distribution
-| Language | Lines of Code |
+| Language | Volume |
 | :--- | :--- |
 | TypeScript | 138,352 |
-| JSON | 70,703 |
-| Markdown | 28,246 |
+| Markdown | 28,278 |
 | CSS | 20,695 |
 | Bourne Shell | 8,439 |
-| YAML | 5,613 |
+| JSON | 6,249 |
 | PowerShell | 2,985 |
 | JavaScript | 2,533 |
-| Python | 1,512 |
-| SQL | 225 |
+| Python | 1,482 |
 
-#### Top Repositories by Volume
-| Repository | Lines of Code |
-| :--- | :--- |
-| `TheNewMikeMusic/artisthub-platform` | 56,317 |
-| `TheNewMikeMusic/Gastly` | 42,754 |
-| `TheNewMikeMusic/tbt-paper-terminal` | 38,673 |
-| `TheNewMikeMusic/xfinds-cross-border-freight-comparison` | 29,763 |
-| `TheNewMikeMusic/fake-cigarette-bubble-toy` | 29,334 |
+#### Technical Depth by Repository
+| Repository | Engineering LOC | Total Volume |
+| :--- | :--- | :--- |
+| `artisthub-platform` | 37,682 | 40,059 |
+| `tbt-paper-terminal` | 36,337 | 36,427 |
+| `Gastly` | 35,859 | 35,928 |
+| `fake-cigarette-bubble-toy` | 21,903 | 21,999 |
+| `Maclock` | 19,844 | 19,915 |
 
 <details>
-<summary>View full repository list</summary>
+<summary>More details</summary>
 
-| Repository | Lines of Code |
+#### Full Language Breakdown
+| Language | Volume |
 | :--- | :--- |
-| `TheNewMikeMusic/Maclock` | 27,171 |
-| `TheNewMikeMusic/beast-china-content-ops-dashboard` | 24,593 |
-| `TheNewMikeMusic/Hotpot-Records` | 22,290 |
-| `TheNewMikeMusic/Tao-Archive` | 7,632 |
-| `TheNewMikeMusic/dance_parser` | 1,243 |
-| `TheNewMikeMusic/TheNewMikeMusic` | 208 |
+| TypeScript | 138,352 |
+| Markdown | 28,278 |
+| CSS | 20,695 |
+| Bourne Shell | 8,439 |
+| JSON | 6,249 |
+| PowerShell | 2,985 |
+| JavaScript | 2,533 |
+| Python | 1,482 |
+| SQL | 225 |
+| Text | 196 |
+| HTML | 180 |
+| SVG | 140 |
+| DOS Batch | 135 |
+| YAML | 90 |
+| INI | 23 |
+| TOML | 1 |
 
+#### Full Repository Index
+| Repository | Engineering LOC | Total Volume |
+| :--- | :--- | :--- |
+| `artisthub-platform` | 37,682 | 40,059 |
+| `tbt-paper-terminal` | 36,337 | 36,427 |
+| `Gastly` | 35,859 | 35,928 |
+| `fake-cigarette-bubble-toy` | 21,903 | 21,999 |
+| `Maclock` | 19,844 | 19,915 |
+| `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
+| `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
+| `Hotpot-Records` | 14,058 | 14,211 |
+| `Tao-Archive` | 5,908 | 5,961 |
+| `dance_parser` | 1,243 | 1,243 |
+| `TheNewMikeMusic` | 210 | 210 |
 </details>
 <!-- LOC_END -->
