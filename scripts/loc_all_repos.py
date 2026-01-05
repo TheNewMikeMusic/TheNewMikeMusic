@@ -54,7 +54,7 @@ def get_all_repos():
         except json.JSONDecodeError:
             print("Error decoding JSON from private repos")
             
-    # Deduplicate (just in case repo appears in both or multiple calls confusingly)
+    # Deduplicate
     seen = set()
     unique_repos = []
     for r in all_repos:
@@ -64,8 +64,6 @@ def get_all_repos():
 
     if not unique_repos:
         print("CRITICAL ERROR: Failed to fetch (or found zero) repositories. Check GH_PAT permissions.")
-        # We don't exit here immediately to allow "0 repos" scenario if truly empty, 
-        # but combined with main() check it will handle it.
         
     return unique_repos
 
@@ -106,9 +104,7 @@ def clone_repos(repos):
         
         print(f"Cloning {full_name} ({repo['visibility']})...")
         cmd = f'gh repo clone {full_name} "{clone_path}" -- --depth 1'
-        res = run_command(cmd)
-        if res is None:
-             print(f"WARNING: Failed to clone {full_name}. Skipping.")
+        run_command(cmd)
 
 def count_loc(repos):
     print("\nCounting lines of code per repo...")
@@ -162,23 +158,23 @@ def generate_markdown(repo_stats, languages_agg, total_code, visible_count, scan
     
     md_lines = []
     
-    # 1. Cleaner Metric Summary
-    md_lines.append(f"📦 **Repos Scanned:** {scanned_count}  ·  🚀 **Total Lines of Code:** {total_code:,}  ·  🕒 **Updated:** {current_time} UTC")
+    # 1. Minimalist Metric Summary
+    md_lines.append(f"**Repositories Scanned:** {scanned_count} | **Aggregate Lines of Code:** {total_code:,} | **Last Synchronized:** {current_time} UTC")
     md_lines.append("")
     
-    # 2. Compact Top Languages Table
-    md_lines.append("#### 📊 Top Languages")
-    md_lines.append("| Language | Code Lines |")
+    # 2. Plain Top Languages Table
+    md_lines.append("#### Language Distribution")
+    md_lines.append("| Language | Lines of Code |")
     md_lines.append("| :--- | :--- |")
     for lang, count in sorted_langs:
         md_lines.append(f"| {lang} | {count:,} |")
     md_lines.append("")
     
-    # 3. Refined Top Repos (Show Top 5, hide rest)
-    md_lines.append("#### 🏆 Top Repositories")
+    # 3. Plain Top Repos (Show Top 5, hide rest)
+    md_lines.append("#### Top Repositories by Volume")
     
     top_5 = sorted_repos[:5]
-    md_lines.append("| Repository | Code Lines |")
+    md_lines.append("| Repository | Lines of Code |")
     md_lines.append("| :--- | :--- |")
     for repo in top_5:
         md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
@@ -186,9 +182,9 @@ def generate_markdown(repo_stats, languages_agg, total_code, visible_count, scan
     if len(sorted_repos) > 5:
         md_lines.append("")
         md_lines.append("<details>")
-        md_lines.append("<summary>📑 Show more repositories</summary>")
+        md_lines.append("<summary>View full repository list</summary>")
         md_lines.append("")
-        md_lines.append("| Repository | Code Lines |")
+        md_lines.append("| Repository | Lines of Code |")
         md_lines.append("| :--- | :--- |")
         for repo in sorted_repos[5:]:
             md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
@@ -232,7 +228,7 @@ def update_readme(content):
     print("README.md updated successfully.")
 
 def main():
-    print(f"--- LOC Scan Started v3.0 (Premium Layout) ---")
+    print(f"--- LOC Scan Started v4.1 (Minimalist Layout) ---")
     print(f"Owner: {OWNER}")
     
     # 1. Get All Repos
@@ -246,8 +242,6 @@ def main():
     
     if not repos:
         print("WARNING: No repositories found after filtering.")
-        # We still want to update README to say "0" maybe? Or just exit.
-        # But if visible_count > 0, we should probably proceed.
         if visible_count == 0:
             print("CRITICAL: Token sees 0 repos. Check permissions.")
             sys.exit(1)
