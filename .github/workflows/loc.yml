@@ -33,17 +33,11 @@ jobs:
         env:
           GITHUB_OWNER: TheNewMikeMusic
           GH_TOKEN: ${{ secrets.GH_PAT }}
-          # Fallback to GITHUB_TOKEN if GH_PAT is missing (though private repos won't work)
-          # Actually the script relies on GH_TOKEN env var for gh cli.
-          # If secrets.GH_PAT is empty, this might fail or fallback to empty string.
-          # PRO TIP: The script just needs A token. If user forgets PAT, public repos still work if we use GITHUB_TOKEN.
-          # But requirement says explicitly "Use PAT". Let's stick to PAT primarily but fail gracefully?
-          # User prompt: "GH_TOKEN=${{ secrets.GH_PAT }}"
           INCLUDE_FORKS: ${{ inputs.include_forks || 'false' }}
         run: |
           if [ -z "${GH_TOKEN}" ]; then
-            echo "::warning::GH_PAT secret is not set. Falling back to GITHUB_TOKEN. Private repos will NOT be scanned."
-            export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+            echo "::error::GH_PAT secret is missing. Cannot access private repos."
+            exit 1
           fi
           python3 scripts/loc_all_repos.py
 
