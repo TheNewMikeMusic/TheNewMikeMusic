@@ -156,26 +156,44 @@ def generate_markdown(repo_stats, languages_agg, total_code, visible_count, scan
     # Sort Languages
     sorted_langs = sorted(languages_agg.items(), key=lambda x: x[1], reverse=True)[:10]
     # Sort Repos
-    sorted_repos = sorted(repo_stats, key=lambda x: x['code'], reverse=True)[:10]
+    sorted_repos = sorted(repo_stats, key=lambda x: x['code'], reverse=True)
+    
     current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
     
     md_lines = []
-    md_lines.append(f"Total repos visible to token: **{visible_count}**")
-    md_lines.append(f"Repos scanned (after filters): **{scanned_count}**")
-    md_lines.append(f"Total Lines of Code: **{total_code:,}**")
-    md_lines.append(f"Last Updated: {current_time} UTC")
+    
+    # 1. Cleaner Metric Summary
+    md_lines.append(f"📦 **Repos Scanned:** {scanned_count}  ·  🚀 **Total Lines of Code:** {total_code:,}  ·  🕒 **Updated:** {current_time} UTC")
     md_lines.append("")
-    md_lines.append("#### Top Languages")
+    
+    # 2. Compact Top Languages Table
+    md_lines.append("#### 📊 Top Languages")
     md_lines.append("| Language | Code Lines |")
     md_lines.append("| :--- | :--- |")
     for lang, count in sorted_langs:
         md_lines.append(f"| {lang} | {count:,} |")
     md_lines.append("")
-    md_lines.append("#### Top Repositories")
+    
+    # 3. Refined Top Repos (Show Top 5, hide rest)
+    md_lines.append("#### 🏆 Top Repositories")
+    
+    top_5 = sorted_repos[:5]
     md_lines.append("| Repository | Code Lines |")
     md_lines.append("| :--- | :--- |")
-    for repo in sorted_repos:
-        md_lines.append(f"| {repo['name']} | {repo['code']:,} |")
+    for repo in top_5:
+        md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
+    
+    if len(sorted_repos) > 5:
+        md_lines.append("")
+        md_lines.append("<details>")
+        md_lines.append("<summary>📑 Show more repositories</summary>")
+        md_lines.append("")
+        md_lines.append("| Repository | Code Lines |")
+        md_lines.append("| :--- | :--- |")
+        for repo in sorted_repos[5:]:
+            md_lines.append(f"| `{repo['name']}` | {repo['code']:,} |")
+        md_lines.append("")
+        md_lines.append("</details>")
         
     return "\n".join(md_lines)
 
@@ -214,7 +232,7 @@ def update_readme(content):
     print("README.md updated successfully.")
 
 def main():
-    print(f"--- LOC Scan Started v2.2 (Fix Visibility Flag) ---")
+    print(f"--- LOC Scan Started v3.0 (Premium Layout) ---")
     print(f"Owner: {OWNER}")
     
     # 1. Get All Repos
