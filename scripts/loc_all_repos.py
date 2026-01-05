@@ -9,6 +9,7 @@ CACHE_DIR = ".repos_cache"
 LOC_START_MARKER = "<!-- LOC_START -->"
 LOC_END_MARKER = "<!-- LOC_END -->"
 README_FILE = "README.md"
+EXCLUDES = "--exclude-dir=node_modules,dist,build,.next,.git,.github,coverage,venv,.venv,target,out"
 
 def run_command(cmd, cwd=None):
     result = subprocess.run(cmd, shell=True, cwd=cwd, text=True, capture_output=True)
@@ -45,39 +46,51 @@ def clone_repos(repos):
     
     for repo in repos:
         name = repo['name']
-        url = repo['sshUrl'] # Use sshUrl for cloning if authenticated via ssh, or httpUrl if https.
-        # Check if we are in environment that supports ssh or https. 
-        # Actually standard gh actions uses https with token. catch 22?
-        # Let's try to use the URL provided by gh which respects protocol preference usually or just construct https with token if needed.
-        # In GitHub Actions, checkout usually uses https.
-        # Let's fallback to just `gh repo clone` which handles auth automatically.
-        
         print(f"Cloning {name}...")
         # Shallow clone single branch
         cmd = f'gh repo clone {OWNER}/{name} {CACHE_DIR}/{name} -- --depth 1'
         run_command(cmd)
 
-def count_loc():
-    print("Counting lines of code...")
-    # Exclude common non-code / generated directories
-    excludes = "--exclude-dir=node_modules,dist,build,.next,.git,.github,coverage,venv,.venv,target,out"
-    cmd = f'cloc {CACHE_DIR} {excludes} --json'
+def count_loc_global():
+    print("Counting global lines of code...")
+    cmd = f'cloc {CACHE_DIR} {EXCLUDES} --json'
     output = run_command(cmd)
     if not output:
         return None
     return json.loads(output)
 
-def generate_markdown(stats):
-    if not stats:
+def count_loc_per_repo(repos):
+    print("Counting lines of code per repo...")
+    repo_stats = []
+    
+    for repo in repos:
+        name = repo['name']
+        repo_path = os.path.join(CACHE_DIR, name)
+        if not os.path.exists(repo_path):
+            continue
+            
+        cmd = f'cloc {repo_path} {EXCLUDES} --json'
+        output = run_command(cmd)
+        if output:
+            try:
+                stats = json.loads(output)
+                code_lines = stats.get('SUM', {}).get('code', 0)
+                repo_stats.append({'name': name, 'code': code_lines})
+            except:
+                pass
+                
+    return repo_stats
+
+def generate_markdown(global_stats, repo_stats, repo_count):
+    if not global_stats:
         return "Could not calculate stats."
     
-    header = stats.get('header', {})
-    sum_stats = stats.get('SUM', {})
+    sum_stats = global_stats.get('SUM', {})
     total_lines = sum_stats.get('code', 0)
     
     # Sort languages by code count
     languages = []
-    for key, value in stats.items():
+    for key, value in global_stats.items():
         if key == 'header' or key == 'SUM':
             continue
         languages.append({'name': key, 'code': value['code']})
@@ -85,18 +98,28 @@ def generate_markdown(stats):
     languages.sort(key=lambda x: x['code'], reverse=True)
     top_langs = languages[:10]
     
-    md_lines = []
-    md_lines.append(f"Expected to scan: **{len(languages)} languages**") # This logic is slightly off, cloc results key IS language.
-    # Let's rephrase.
+    # Sort repos by code count
+    repo_stats.sort(key=lambda x: x['code'], reverse=True)
+    top_repos = repo_stats[:10]
     
+    md_lines = []
+    md_lines.append(f"Repos scanned: **{repo_count}**")
     md_lines.append(f"Total Lines of Code: **{total_lines:,}**")
     md_lines.append(f"Last Updated: {time.strftime('%Y-%m-%d %H:%M:%S')} UTC")
+    
     md_lines.append("")
+    md_lines.append("#### Top Languages")
     md_lines.append("| Language | Code Lines |")
     md_lines.append("| :--- | :--- |")
-    
     for lang in top_langs:
         md_lines.append(f"| {lang['name']} | {lang['code']:,} |")
+
+    md_lines.append("")
+    md_lines.append("#### Top Repositories")
+    md_lines.append("| Repository | Code Lines |")
+    md_lines.append("| :--- | :--- |")
+    for repo in top_repos:
+        md_lines.append(f"| {repo['name']} | {repo['code']:,} |")
         
     return "\n".join(md_lines)
 
@@ -134,10 +157,11 @@ def main():
         return
 
     clone_repos(repos)
-    stats = count_loc()
+    global_stats = count_loc_global()
+    repo_stats = count_loc_per_repo(repos)
     
-    if stats:
-        md_content = generate_markdown(stats)
+    if global_stats:
+        md_content = generate_markdown(global_stats, repo_stats, len(repos))
         print("Generated Stats:")
         print(md_content)
         update_readme(md_content)
