@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import json
 import time
+import sys
 
 # Configuration
 OWNER = os.environ.get("GITHUB_OWNER", "TheNewMikeMusic")
@@ -20,53 +21,46 @@ def run_command(cmd, cwd=None, env=None):
     if env:
         environ.update(env)
     
+    print(f"DEBUG: Running command: {cmd}")
     # Capture output and suppress stderr unless error
     result = subprocess.run(cmd, shell=True, cwd=cwd, text=True, capture_output=True, env=environ)
     if result.returncode != 0:
-        print(f"Error running command: {cmd}")
-        print(result.stderr)
+        print(f"ERROR: Command failed with exit code {result.returncode}")
+        print(f"ERROR STDERR: {result.stderr}")
         return None
     return result.stdout.strip()
 
 def get_all_repos():
     print(f"Fetching all repositories (visibility=all)...")
     # Fetch all repos visible to the token (public + private)
-    # Using --visibility all and increasing limit
     cmd = f'gh repo list {OWNER} --visibility all -L 1000 --json nameWithOwner,name,isFork,isArchived,visibility,sshUrl,url'
     output = run_command(cmd)
     if not output:
-        return []
+        print("CRITICAL ERROR: Failed to fetch repository list. Check GH_PAT permissions.")
+        sys.exit(1) # Fail the workflow
     return json.loads(output)
 
 def filter_repos(all_repos):
     excluded_names = [r.strip() for r in EXCLUDE_REPOS.split(",") if r.strip()]
     filtered_repos = []
-    
     print(f"\nTotal repos visible to token: {len(all_repos)}")
     
     for repo in all_repos:
         full_name = repo['nameWithOwner']
-        
         # Filter Archived
         if repo.get('isArchived', False):
             continue
-            
         # Filter Forks
         if repo.get('isFork', False) and not INCLUDE_FORKS:
             continue
-            
         # Filter Excluded Names
         if repo['name'] in excluded_names or full_name in excluded_names:
             print(f"Skipping excluded repo: {full_name}")
             continue
-            
         filtered_repos.append(repo)
-        
     return filtered_repos
 
 def get_safe_path(repo):
-    # Flatten path: Owner/Repo -> Owner__Repo
-    # This avoids nested directories and is filesystem safe
     safe_name = repo['nameWithOwner'].replace('/', '__')
     return os.path.join(CACHE_DIR, safe_name)
 
@@ -82,9 +76,10 @@ def clone_repos(repos):
         clone_path = get_safe_path(repo)
         
         print(f"Cloning {full_name} ({repo['visibility']})...")
-        # Use gh repo clone which handles auth automatically
         cmd = f'gh repo clone {full_name} "{clone_path}" -- --depth 1'
-        run_command(cmd)
+        res = run_command(cmd)
+        if res is None:
+             print(f"WARNING: Failed to clone {full_name}. Skipping.")
 
 def count_loc(repos):
     print("\nCounting lines of code per repo...")
@@ -100,7 +95,6 @@ def count_loc(repos):
         repo_path = get_safe_path(repo)
         
         if not os.path.exists(repo_path):
-            print(f"Warning: Path not found for {full_name}")
             continue
             
         cmd = f'cloc "{repo_path}" {EXCLUDES} --json'
@@ -109,14 +103,12 @@ def count_loc(repos):
         if output:
             try:
                 stats = json.loads(output)
-                # Repo sum
                 code_lines = stats.get('SUM', {}).get('code', 0)
                 repo_stats.append({'name': full_name, 'code': code_lines})
                 
                 print(f"{full_name:<40} | {code_lines:<10}")
                 total_code += code_lines
                 
-                # Aggregate languages
                 for lang, data in stats.items():
                     if lang == 'header' or lang == 'SUM':
                         continue
@@ -132,35 +124,24 @@ def count_loc(repos):
     return repo_stats, languages_agg, total_code
 
 def generate_markdown(repo_stats, languages_agg, total_code, visible_count, scanned_count):
-    
     # Sort Languages
     sorted_langs = sorted(languages_agg.items(), key=lambda x: x[1], reverse=True)[:10]
-    
     # Sort Repos
     sorted_repos = sorted(repo_stats, key=lambda x: x['code'], reverse=True)[:10]
-    
     current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
     
     md_lines = []
-    
-    # 1. Overview
     md_lines.append(f"Total repos visible to token: **{visible_count}**")
     md_lines.append(f"Repos scanned (after filters): **{scanned_count}**")
     md_lines.append(f"Total Lines of Code: **{total_code:,}**")
     md_lines.append(f"Last Updated: {current_time} UTC")
-    
     md_lines.append("")
-    
-    # 2. Top Languages
     md_lines.append("#### Top Languages")
     md_lines.append("| Language | Code Lines |")
     md_lines.append("| :--- | :--- |")
     for lang, count in sorted_langs:
         md_lines.append(f"| {lang} | {count:,} |")
-
     md_lines.append("")
-    
-    # 3. Top Repos
     md_lines.append("#### Top Repositories")
     md_lines.append("| Repository | Code Lines |")
     md_lines.append("| :--- | :--- |")
@@ -184,49 +165,51 @@ def ensure_readme_structure():
 
 def update_readme(content):
     ensure_readme_structure()
-    
     if not os.path.exists(README_FILE):
         print(f"{README_FILE} not found.")
         return
-
     with open(README_FILE, 'r', encoding='utf-8') as f:
         readme_content = f.read()
-
     start_idx = readme_content.find(LOC_START_MARKER)
     end_idx = readme_content.find(LOC_END_MARKER)
-
     if start_idx == -1 or end_idx == -1:
         print("Markers not found in README.md")
         return
-
     new_content = (
         readme_content[:start_idx + len(LOC_START_MARKER)] + "\n" +
         content + "\n" +
         readme_content[end_idx:]
     )
-
     with open(README_FILE, 'w', encoding='utf-8') as f:
         f.write(new_content)
     print("README.md updated successfully.")
 
 def main():
-    print(f"--- LOC Scan Started v2.0 (Full Account) ---")
+    print(f"--- LOC Scan Started v2.1 (Debug Mode) ---")
     print(f"Owner: {OWNER}")
-    print(f"Include Forks: {INCLUDE_FORKS}")
     
+    # 1. Get All Repos
     all_repos = get_all_repos()
     visible_count = len(all_repos)
+    print(f"Successfully fetched {visible_count} repositories.")
     
+    # 2. Filter
     repos = filter_repos(all_repos)
     scanned_count = len(repos)
     
     if not repos:
-        print("No repositories found to scan.")
-        return
+        print("WARNING: No repositories found after filtering.")
+        # We still want to update README to say "0" maybe? Or just exit.
+        # But if visible_count > 0, we should probably proceed.
+        if visible_count == 0:
+            print("CRITICAL: Token sees 0 repos. Check permissions.")
+            sys.exit(1)
 
+    # 3. Clone & Count
     clone_repos(repos)
     repo_stats, languages_agg, total_code = count_loc(repos)
     
+    # 4. Generate & Update
     md_content = generate_markdown(repo_stats, languages_agg, total_code, visible_count, scanned_count)
     update_readme(md_content)
         
