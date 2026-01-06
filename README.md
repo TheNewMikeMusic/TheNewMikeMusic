@@ -19,25 +19,25 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 11  |  **Engineering LOC:** 203,778  |  **Total LOC:** 210,027 (incl config/data)  |  **Sync:** 2026-01-05 08:48 UTC
+**Repositories:** 11  |  **Engineering LOC:** 203,842  |  **Total LOC:** 210,092 (incl config/data)  |  **Sync:** 2026-01-06 00:59 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 138,352 |
-| Markdown | 28,302 |
+| TypeScript | 138,350 |
+| Markdown | 28,368 |
 | CSS | 20,695 |
 | Bourne Shell | 8,439 |
-| JSON | 6,249 |
+| JSON | 6,250 |
 | PowerShell | 2,985 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `artisthub-platform` | 37,682 | 40,059 |
-| `tbt-paper-terminal` | 36,337 | 36,427 |
+| `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `fake-cigarette-bubble-toy` | 21,903 | 21,999 |
+| `fake-cigarette-bubble-toy` | 21,901 | 21,997 |
 | `Maclock` | 19,844 | 19,915 |
 
 <details>
@@ -46,11 +46,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 138,352 |
-| Markdown | 28,302 |
+| TypeScript | 138,350 |
+| Markdown | 28,368 |
 | CSS | 20,695 |
 | Bourne Shell | 8,439 |
-| JSON | 6,249 |
+| JSON | 6,250 |
 | PowerShell | 2,985 |
 | JavaScript | 2,533 |
 | Python | 1,482 |
@@ -67,15 +67,15 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `artisthub-platform` | 37,682 | 40,059 |
-| `tbt-paper-terminal` | 36,337 | 36,427 |
+| `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `fake-cigarette-bubble-toy` | 21,903 | 21,999 |
+| `fake-cigarette-bubble-toy` | 21,901 | 21,997 |
 | `Maclock` | 19,844 | 19,915 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,211 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `dance_parser` | 1,243 | 1,243 |
-| `TheNewMikeMusic` | 234 | 234 |
+| `TheNewMikeMusic` | 232 | 232 |
 </details>
 <!-- LOC_END -->
