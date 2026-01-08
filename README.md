@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 12  |  **Engineering LOC:** 205,883  |  **Total LOC:** 212,203 (incl config/data)  |  **Sync:** 2026-01-08 00:59 UTC
+**Repositories:** 13  |  **Engineering LOC:** 207,984  |  **Total LOC:** 214,450 (incl config/data)  |  **Sync:** 2026-01-08 10:33 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 139,920 |
-| Markdown | 28,665 |
-| CSS | 20,844 |
+| TypeScript | 140,638 |
+| Markdown | 28,699 |
+| CSS | 20,903 |
 | Bourne Shell | 8,439 |
-| JSON | 6,320 |
+| JSON | 6,466 |
 | PowerShell | 2,985 |
 
 #### Technical Depth by Repository
@@ -46,22 +46,23 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 139,920 |
-| Markdown | 28,665 |
-| CSS | 20,844 |
+| TypeScript | 140,638 |
+| Markdown | 28,699 |
+| CSS | 20,903 |
 | Bourne Shell | 8,439 |
-| JSON | 6,320 |
+| JSON | 6,466 |
 | PowerShell | 2,985 |
-| JavaScript | 2,553 |
-| Python | 1,482 |
-| SQL | 225 |
+| JavaScript | 2,591 |
+| Python | 1,635 |
+| Rust | 984 |
+| SQL | 278 |
 | Text | 196 |
-| HTML | 180 |
-| SVG | 145 |
+| HTML | 193 |
+| SVG | 147 |
 | DOS Batch | 135 |
 | YAML | 90 |
+| TOML | 48 |
 | INI | 23 |
-| TOML | 1 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
@@ -75,6 +76,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,211 |
 | `Tao-Archive` | 5,908 | 5,961 |
+| `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
 | `TheNewMikeMusic` | 233 | 233 |
