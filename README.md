@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 14  |  **Engineering LOC:** 209,609  |  **Total LOC:** 216,131 (incl config/data)  |  **Sync:** 2026-01-12 04:13 UTC
+**Repositories:** 14  |  **Engineering LOC:** 211,855  |  **Total LOC:** 218,379 (incl config/data)  |  **Sync:** 2026-01-12 07:35 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 142,018 |
+| TypeScript | 144,281 |
 | Markdown | 28,715 |
 | CSS | 20,903 |
 | Bourne Shell | 8,439 |
-| JSON | 6,522 |
+| JSON | 6,524 |
 | PowerShell | 2,985 |
 
 #### Technical Depth by Repository
@@ -46,16 +46,16 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 142,018 |
+| TypeScript | 144,281 |
 | Markdown | 28,715 |
 | CSS | 20,903 |
 | Bourne Shell | 8,439 |
-| JSON | 6,522 |
+| JSON | 6,524 |
 | PowerShell | 2,985 |
 | JavaScript | 2,591 |
 | Python | 1,635 |
 | Rust | 984 |
-| HTML | 422 |
+| HTML | 405 |
 | SQL | 278 |
 | Text | 196 |
 | SVG | 147 |
@@ -76,9 +76,9 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,211 |
 | `Tao-Archive` | 5,908 | 5,961 |
+| `ecom-asset-studio` | 3,868 | 3,926 |
 | `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
-| `ecom-asset-studio` | 1,622 | 1,678 |
 | `dance_parser` | 1,243 | 1,243 |
 | `TheNewMikeMusic` | 236 | 236 |
 </details>
