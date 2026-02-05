@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 16  |  **Engineering LOC:** 226,830  |  **Total LOC:** 233,509 (incl config/data)  |  **Sync:** 2026-02-04 01:08 UTC
+**Repositories:** 16  |  **Engineering LOC:** 236,525  |  **Total LOC:** 243,250 (incl config/data)  |  **Sync:** 2026-02-05 01:08 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 152,626 |
-| Markdown | 30,878 |
-| CSS | 21,946 |
+| TypeScript | 160,280 |
+| Markdown | 31,948 |
+| CSS | 22,292 |
 | Bourne Shell | 8,457 |
-| JSON | 6,679 |
-| JavaScript | 5,340 |
+| JSON | 6,725 |
+| JavaScript | 5,892 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -46,15 +46,15 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 152,626 |
-| Markdown | 30,878 |
-| CSS | 21,946 |
+| TypeScript | 160,280 |
+| Markdown | 31,948 |
+| CSS | 22,292 |
 | Bourne Shell | 8,457 |
-| JSON | 6,679 |
-| JavaScript | 5,340 |
+| JSON | 6,725 |
+| JavaScript | 5,892 |
 | PowerShell | 3,002 |
 | Python | 1,635 |
-| HTML | 1,045 |
+| HTML | 1,118 |
 | Rust | 984 |
 | SQL | 278 |
 | Text | 196 |
@@ -72,11 +72,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Gastly` | 35,859 | 35,928 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `Maclock` | 19,844 | 19,915 |
+| `undefinedesign-erp` | 16,418 | 16,517 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,211 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
-| `undefinedesign-erp` | 6,723 | 6,776 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
 | `DIT-ingest` | 2,101 | 2,247 |
