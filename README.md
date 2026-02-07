@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 16  |  **Engineering LOC:** 238,281  |  **Total LOC:** 245,006 (incl config/data)  |  **Sync:** 2026-02-06 01:08 UTC
+**Repositories:** 16  |  **Engineering LOC:** 240,308  |  **Total LOC:** 247,125 (incl config/data)  |  **Sync:** 2026-02-07 01:07 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 161,784 |
-| Markdown | 31,949 |
+| TypeScript | 163,704 |
+| Markdown | 31,973 |
 | CSS | 22,292 |
 | Bourne Shell | 8,457 |
-| JSON | 6,725 |
-| JavaScript | 6,143 |
+| JSON | 6,817 |
+| JavaScript | 6,160 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
-| `Maclock` | 19,844 | 19,915 |
+| `undefinedesign-erp` | 20,201 | 20,392 |
 
 <details>
 <summary>More details</summary>
@@ -46,12 +46,12 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 161,784 |
-| Markdown | 31,949 |
+| TypeScript | 163,704 |
+| Markdown | 31,973 |
 | CSS | 22,292 |
 | Bourne Shell | 8,457 |
-| JSON | 6,725 |
-| JavaScript | 6,143 |
+| JSON | 6,817 |
+| JavaScript | 6,160 |
 | PowerShell | 3,002 |
 | Python | 1,635 |
 | HTML | 1,118 |
@@ -59,10 +59,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | SQL | 278 |
 | Text | 196 |
 | SVG | 147 |
+| YAML | 141 |
 | DOS Batch | 135 |
-| YAML | 90 |
 | TOML | 48 |
 | INI | 23 |
+| Dockerfile | 15 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
@@ -71,8 +72,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
+| `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
-| `undefinedesign-erp` | 18,174 | 18,273 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,211 |
