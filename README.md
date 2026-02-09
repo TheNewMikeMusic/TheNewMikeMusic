@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 16  |  **Engineering LOC:** 240,309  |  **Total LOC:** 247,126 (incl config/data)  |  **Sync:** 2026-02-08 01:30 UTC
+**Repositories:** 17  |  **Engineering LOC:** 266,915  |  **Total LOC:** 273,817 (incl config/data)  |  **Sync:** 2026-02-09 01:14 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 163,704 |
-| Markdown | 31,974 |
-| CSS | 22,292 |
-| Bourne Shell | 8,457 |
-| JSON | 6,817 |
-| JavaScript | 6,160 |
+| TypeScript | 188,331 |
+| Markdown | 32,690 |
+| CSS | 22,608 |
+| Bourne Shell | 8,514 |
+| JSON | 6,902 |
+| JavaScript | 6,187 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -37,8 +37,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
+| `Omi-ERP` | 26,606 | 26,691 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
-| `undefinedesign-erp` | 20,201 | 20,392 |
 
 <details>
 <summary>More details</summary>
@@ -46,22 +46,22 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 163,704 |
-| Markdown | 31,974 |
-| CSS | 22,292 |
-| Bourne Shell | 8,457 |
-| JSON | 6,817 |
-| JavaScript | 6,160 |
+| TypeScript | 188,331 |
+| Markdown | 32,690 |
+| CSS | 22,608 |
+| Bourne Shell | 8,514 |
+| JSON | 6,902 |
+| JavaScript | 6,187 |
 | PowerShell | 3,002 |
-| Python | 1,635 |
+| Python | 1,719 |
 | HTML | 1,118 |
+| SQL | 1,034 |
 | Rust | 984 |
-| SQL | 278 |
 | Text | 196 |
-| SVG | 147 |
-| YAML | 141 |
+| YAML | 158 |
+| SVG | 152 |
 | DOS Batch | 135 |
-| TOML | 48 |
+| TOML | 49 |
 | INI | 23 |
 | Dockerfile | 15 |
 
@@ -71,6 +71,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
+| `Omi-ERP` | 26,606 | 26,691 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
