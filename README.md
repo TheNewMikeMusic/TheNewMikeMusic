@@ -19,25 +19,25 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 17  |  **Engineering LOC:** 266,916  |  **Total LOC:** 273,818 (incl config/data)  |  **Sync:** 2026-02-17 01:12 UTC
+**Repositories:** 17  |  **Engineering LOC:** 294,289  |  **Total LOC:** 301,204 (incl config/data)  |  **Sync:** 2026-02-18 01:14 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 188,331 |
-| Markdown | 32,691 |
-| CSS | 22,608 |
-| Bourne Shell | 8,514 |
-| JSON | 6,902 |
-| JavaScript | 6,187 |
+| TypeScript | 215,154 |
+| Markdown | 32,951 |
+| CSS | 22,642 |
+| Bourne Shell | 8,572 |
+| JSON | 6,915 |
+| JavaScript | 6,207 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
+| `Omi-ERP` | 53,979 | 54,077 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `Omi-ERP` | 26,606 | 26,691 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 
 <details>
@@ -46,20 +46,20 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 188,331 |
-| Markdown | 32,691 |
-| CSS | 22,608 |
-| Bourne Shell | 8,514 |
-| JSON | 6,902 |
-| JavaScript | 6,187 |
+| TypeScript | 215,154 |
+| Markdown | 32,951 |
+| CSS | 22,642 |
+| Bourne Shell | 8,572 |
+| JSON | 6,915 |
+| JavaScript | 6,207 |
 | PowerShell | 3,002 |
 | Python | 1,719 |
+| SQL | 1,206 |
 | HTML | 1,118 |
-| SQL | 1,034 |
 | Rust | 984 |
 | Text | 196 |
+| SVG | 158 |
 | YAML | 158 |
-| SVG | 152 |
 | DOS Batch | 135 |
 | TOML | 49 |
 | INI | 23 |
@@ -68,10 +68,10 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
+| `Omi-ERP` | 53,979 | 54,077 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `Omi-ERP` | 26,606 | 26,691 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
