@@ -19,22 +19,22 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 17  |  **Engineering LOC:** 294,289  |  **Total LOC:** 301,214 (incl config/data)  |  **Sync:** 2026-03-10 01:06 UTC
+**Repositories:** 18  |  **Engineering LOC:** 392,884  |  **Total LOC:** 401,734 (incl config/data)  |  **Sync:** 2026-03-11 01:07 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 215,154 |
-| Markdown | 32,951 |
-| CSS | 22,642 |
-| Bourne Shell | 8,572 |
-| JSON | 6,925 |
-| JavaScript | 6,207 |
+| TypeScript | 289,850 |
+| Markdown | 44,283 |
+| CSS | 24,701 |
+| JSON | 8,850 |
+| Bourne Shell | 8,718 |
+| JavaScript | 6,532 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 53,979 | 54,077 |
+| `Omi-ERP` | 141,167 | 141,365 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
@@ -46,19 +46,22 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 215,154 |
-| Markdown | 32,951 |
-| CSS | 22,642 |
-| Bourne Shell | 8,572 |
-| JSON | 6,925 |
-| JavaScript | 6,207 |
-| PowerShell | 3,002 |
-| Python | 1,719 |
-| SQL | 1,206 |
-| HTML | 1,118 |
+| TypeScript | 289,850 |
+| Markdown | 44,283 |
+| CSS | 24,701 |
+| JSON | 8,850 |
+| Bourne Shell | 8,718 |
+| JavaScript | 6,532 |
+| PowerShell | 4,802 |
+| zsh | 3,410 |
+| Python | 2,553 |
+| SQL | 2,234 |
+| HTML | 2,124 |
+| Fish Shell | 1,714 |
 | Rust | 984 |
-| Text | 196 |
-| SVG | 158 |
+| Bourne Again Shell | 240 |
+| Text | 197 |
+| SVG | 162 |
 | YAML | 158 |
 | DOS Batch | 135 |
 | TOML | 49 |
@@ -68,7 +71,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 53,979 | 54,077 |
+| `Omi-ERP` | 141,167 | 141,365 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
@@ -78,6 +81,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,221 |
+| `openclaw-backup` | 11,407 | 13,232 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
