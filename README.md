@@ -19,7 +19,7 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 18  |  **Engineering LOC:** 392,888  |  **Total LOC:** 401,738 (incl config/data)  |  **Sync:** 2026-03-12 01:04 UTC
+**Repositories:** 18  |  **Engineering LOC:** 392,894  |  **Total LOC:** 401,510 (incl config/data)  |  **Sync:** 2026-03-13 01:09 UTC
 
 #### Language Distribution
 | Language | LOC |
@@ -27,8 +27,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | TypeScript | 289,850 |
 | Markdown | 44,287 |
 | CSS | 24,701 |
-| JSON | 8,850 |
-| Bourne Shell | 8,718 |
+| Bourne Shell | 8,724 |
+| JSON | 8,616 |
 | JavaScript | 6,532 |
 
 #### Technical Depth by Repository
@@ -49,8 +49,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | TypeScript | 289,850 |
 | Markdown | 44,287 |
 | CSS | 24,701 |
-| JSON | 8,850 |
-| Bourne Shell | 8,718 |
+| Bourne Shell | 8,724 |
+| JSON | 8,616 |
 | JavaScript | 6,532 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
@@ -81,7 +81,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,221 |
-| `openclaw-backup` | 11,407 | 13,232 |
+| `openclaw-backup` | 11,413 | 13,004 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
