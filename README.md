@@ -19,22 +19,22 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 18  |  **Engineering LOC:** 392,894  |  **Total LOC:** 401,510 (incl config/data)  |  **Sync:** 2026-03-14 01:09 UTC
+**Repositories:** 18  |  **Engineering LOC:** 397,403  |  **Total LOC:** 406,022 (incl config/data)  |  **Sync:** 2026-03-15 01:21 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 289,850 |
-| Markdown | 44,287 |
-| CSS | 24,701 |
+| TypeScript | 291,767 |
+| Markdown | 44,660 |
+| CSS | 25,280 |
 | Bourne Shell | 8,724 |
-| JSON | 8,616 |
-| JavaScript | 6,532 |
+| JSON | 8,619 |
+| JavaScript | 8,172 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 141,167 | 141,365 |
+| `Omi-ERP` | 145,676 | 145,877 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
@@ -46,12 +46,12 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 289,850 |
-| Markdown | 44,287 |
-| CSS | 24,701 |
+| TypeScript | 291,767 |
+| Markdown | 44,660 |
+| CSS | 25,280 |
 | Bourne Shell | 8,724 |
-| JSON | 8,616 |
-| JavaScript | 6,532 |
+| JSON | 8,619 |
+| JavaScript | 8,172 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
 | Python | 2,553 |
@@ -71,7 +71,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 141,167 | 141,365 |
+| `Omi-ERP` | 145,676 | 145,877 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
