@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 18  |  **Engineering LOC:** 399,949  |  **Total LOC:** 408,568 (incl config/data)  |  **Sync:** 2026-03-25 01:14 UTC
+**Repositories:** 19  |  **Engineering LOC:** 403,217  |  **Total LOC:** 411,892 (incl config/data)  |  **Sync:** 2026-03-26 01:20 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 294,099 |
-| Markdown | 44,660 |
-| CSS | 25,494 |
+| TypeScript | 297,116 |
+| Markdown | 44,742 |
+| CSS | 25,655 |
 | Bourne Shell | 8,724 |
-| JSON | 8,619 |
-| JavaScript | 8,172 |
+| JSON | 8,675 |
+| JavaScript | 8,180 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -46,12 +46,12 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 294,099 |
-| Markdown | 44,660 |
-| CSS | 25,494 |
+| TypeScript | 297,116 |
+| Markdown | 44,742 |
+| CSS | 25,655 |
 | Bourne Shell | 8,724 |
-| JSON | 8,619 |
-| JavaScript | 8,172 |
+| JSON | 8,675 |
+| JavaScript | 8,180 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
 | Python | 2,553 |
@@ -85,6 +85,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
+| `copper-elf` | 3,268 | 3,324 |
 | `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
