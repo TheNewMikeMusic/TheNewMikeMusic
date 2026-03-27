@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 19  |  **Engineering LOC:** 403,217  |  **Total LOC:** 411,892 (incl config/data)  |  **Sync:** 2026-03-26 01:20 UTC
+**Repositories:** 19  |  **Engineering LOC:** 408,973  |  **Total LOC:** 425,541 (incl config/data)  |  **Sync:** 2026-03-27 01:19 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 297,116 |
-| Markdown | 44,742 |
-| CSS | 25,655 |
+| TypeScript | 301,848 |
+| Markdown | 44,925 |
+| CSS | 25,963 |
+| JSON | 16,568 |
 | Bourne Shell | 8,724 |
-| JSON | 8,675 |
-| JavaScript | 8,180 |
+| JavaScript | 8,539 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -46,15 +46,15 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 297,116 |
-| Markdown | 44,742 |
-| CSS | 25,655 |
+| TypeScript | 301,848 |
+| Markdown | 44,925 |
+| CSS | 25,963 |
+| JSON | 16,568 |
 | Bourne Shell | 8,724 |
-| JSON | 8,675 |
-| JavaScript | 8,180 |
+| JavaScript | 8,539 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
-| Python | 2,553 |
+| Python | 2,719 |
 | SQL | 2,234 |
 | HTML | 2,124 |
 | Fish Shell | 1,714 |
@@ -67,6 +67,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | TOML | 49 |
 | INI | 23 |
 | Dockerfile | 15 |
+| CSV | 8 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
@@ -82,13 +83,13 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,221 |
 | `openclaw-backup` | 11,413 | 13,004 |
+| `copper-elf` | 9,023 | 16,972 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
-| `copper-elf` | 3,268 | 3,324 |
 | `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
-| `TheNewMikeMusic` | 244 | 244 |
+| `TheNewMikeMusic` | 245 | 245 |
 </details>
 <!-- LOC_END -->
