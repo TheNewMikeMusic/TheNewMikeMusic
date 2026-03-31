@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 19  |  **Engineering LOC:** 418,638  |  **Total LOC:** 435,210 (incl config/data)  |  **Sync:** 2026-03-30 01:24 UTC
+**Repositories:** 19  |  **Engineering LOC:** 428,215  |  **Total LOC:** 606,127 (incl config/data)  |  **Sync:** 2026-03-31 01:21 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 310,935 |
-| Markdown | 44,942 |
-| CSS | 26,220 |
-| JSON | 16,572 |
-| JavaScript | 8,839 |
+| TypeScript | 319,832 |
+| JSON | 177,912 |
+| Markdown | 45,407 |
+| CSS | 26,287 |
+| JavaScript | 8,900 |
 | Bourne Shell | 8,724 |
 
 #### Technical Depth by Repository
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
+| `copper-elf` | 28,264 | 197,557 |
 
 <details>
 <summary>More details</summary>
@@ -46,15 +46,15 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 310,935 |
-| Markdown | 44,942 |
-| CSS | 26,220 |
-| JSON | 16,572 |
-| JavaScript | 8,839 |
+| TypeScript | 319,832 |
+| JSON | 177,912 |
+| Markdown | 45,407 |
+| CSS | 26,287 |
+| JavaScript | 8,900 |
 | Bourne Shell | 8,724 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
-| Python | 2,719 |
+| Python | 2,747 |
 | SQL | 2,234 |
 | HTML | 2,124 |
 | Fish Shell | 1,714 |
@@ -64,10 +64,10 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | SVG | 166 |
 | YAML | 158 |
 | DOS Batch | 135 |
+| CSV | 67 |
 | TOML | 49 |
 | INI | 23 |
 | Dockerfile | 15 |
-| CSV | 8 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
@@ -76,10 +76,10 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
+| `copper-elf` | 28,264 | 197,557 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
-| `copper-elf` | 18,687 | 26,640 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Hotpot-Records` | 14,058 | 14,221 |
