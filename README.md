@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 19  |  **Engineering LOC:** 428,215  |  **Total LOC:** 606,127 (incl config/data)  |  **Sync:** 2026-03-31 01:21 UTC
+**Repositories:** 20  |  **Engineering LOC:** 461,739  |  **Total LOC:** 645,875 (incl config/data)  |  **Sync:** 2026-04-01 01:28 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 319,832 |
-| JSON | 177,912 |
-| Markdown | 45,407 |
-| CSS | 26,287 |
-| JavaScript | 8,900 |
-| Bourne Shell | 8,724 |
+| TypeScript | 328,289 |
+| JSON | 184,136 |
+| Markdown | 53,231 |
+| CSS | 26,366 |
+| Python | 15,928 |
+| JavaScript | 8,905 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `copper-elf` | 28,264 | 197,557 |
+| `Ekavo-ERP` | 33,524 | 39,748 |
 
 <details>
 <summary>More details</summary>
@@ -46,26 +46,26 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 319,832 |
-| JSON | 177,912 |
-| Markdown | 45,407 |
-| CSS | 26,287 |
-| JavaScript | 8,900 |
+| TypeScript | 328,289 |
+| JSON | 184,136 |
+| Markdown | 53,231 |
+| CSS | 26,366 |
+| Python | 15,928 |
+| JavaScript | 8,905 |
 | Bourne Shell | 8,724 |
+| SQL | 5,419 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
-| Python | 2,747 |
-| SQL | 2,234 |
-| HTML | 2,124 |
+| HTML | 2,596 |
 | Fish Shell | 1,714 |
 | Rust | 984 |
+| CSV | 312 |
 | Bourne Again Shell | 240 |
 | Text | 197 |
+| YAML | 193 |
 | SVG | 166 |
-| YAML | 158 |
 | DOS Batch | 135 |
-| CSV | 67 |
-| TOML | 49 |
+| TOML | 90 |
 | INI | 23 |
 | Dockerfile | 15 |
 
@@ -76,6 +76,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
+| `Ekavo-ERP` | 33,524 | 39,748 |
 | `copper-elf` | 28,264 | 197,557 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
