@@ -19,14 +19,14 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 20  |  **Engineering LOC:** 466,440  |  **Total LOC:** 650,578 (incl config/data)  |  **Sync:** 2026-04-03 01:20 UTC
+**Repositories:** 20  |  **Engineering LOC:** 467,654  |  **Total LOC:** 651,808 (incl config/data)  |  **Sync:** 2026-04-04 01:15 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 332,551 |
-| JSON | 184,138 |
-| Markdown | 53,232 |
+| TypeScript | 333,346 |
+| JSON | 184,154 |
+| Markdown | 53,651 |
 | CSS | 26,781 |
 | Python | 15,928 |
 | JavaScript | 8,928 |
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `Ekavo-ERP` | 33,524 | 39,748 |
+| `copper-elf` | 34,178 | 203,489 |
 
 <details>
 <summary>More details</summary>
@@ -46,9 +46,9 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 332,551 |
-| JSON | 184,138 |
-| Markdown | 53,232 |
+| TypeScript | 333,346 |
+| JSON | 184,154 |
+| Markdown | 53,651 |
 | CSS | 26,781 |
 | Python | 15,928 |
 | JavaScript | 8,928 |
@@ -76,8 +76,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
+| `copper-elf` | 34,178 | 203,489 |
 | `Ekavo-ERP` | 33,524 | 39,748 |
-| `copper-elf` | 32,964 | 202,259 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
