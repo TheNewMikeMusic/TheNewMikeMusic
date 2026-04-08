@@ -19,26 +19,26 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 21  |  **Engineering LOC:** 488,062  |  **Total LOC:** 706,048 (incl config/data)  |  **Sync:** 2026-04-07 01:22 UTC
+**Repositories:** 21  |  **Engineering LOC:** 529,232  |  **Total LOC:** 783,894 (incl config/data)  |  **Sync:** 2026-04-08 01:23 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 349,222 |
-| JSON | 217,986 |
-| Markdown | 52,586 |
-| CSS | 27,037 |
-| Python | 15,928 |
-| JavaScript | 12,139 |
+| TypeScript | 376,121 |
+| JSON | 254,662 |
+| Markdown | 52,771 |
+| Python | 29,922 |
+| CSS | 27,054 |
+| JavaScript | 12,155 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 148,222 | 148,423 |
+| `Ekavo-ERP` | 74,694 | 117,594 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
-| `copper-elf` | 34,178 | 203,489 |
 
 <details>
 <summary>More details</summary>
@@ -46,12 +46,12 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 349,222 |
-| JSON | 217,986 |
-| Markdown | 52,586 |
-| CSS | 27,037 |
-| Python | 15,928 |
-| JavaScript | 12,139 |
+| TypeScript | 376,121 |
+| JSON | 254,662 |
+| Markdown | 52,771 |
+| Python | 29,922 |
+| CSS | 27,054 |
+| JavaScript | 12,155 |
 | Bourne Shell | 8,094 |
 | SQL | 5,558 |
 | HTML | 5,292 |
@@ -59,13 +59,14 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
 | Rust | 984 |
-| CSV | 312 |
+| CSV | 320 |
 | SVG | 276 |
 | Bourne Again Shell | 240 |
 | YAML | 193 |
 | DOS Batch | 135 |
-| TOML | 90 |
-| INI | 23 |
+| TOML | 94 |
+| INI | 52 |
+| Mako | 18 |
 | Dockerfile | 15 |
 | Text | 12 |
 
@@ -73,11 +74,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 148,222 | 148,423 |
+| `Ekavo-ERP` | 74,694 | 117,594 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
 | `copper-elf` | 34,178 | 203,489 |
-| `Ekavo-ERP` | 33,524 | 39,748 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
