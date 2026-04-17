@@ -19,22 +19,22 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 21  |  **Engineering LOC:** 529,233  |  **Total LOC:** 783,895 (incl config/data)  |  **Sync:** 2026-04-16 01:30 UTC
+**Repositories:** 21  |  **Engineering LOC:** 609,286  |  **Total LOC:** 864,060 (incl config/data)  |  **Sync:** 2026-04-17 01:27 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 376,121 |
-| JSON | 254,662 |
-| Markdown | 52,772 |
+| TypeScript | 399,104 |
+| JSON | 254,774 |
+| JavaScript | 60,346 |
+| Markdown | 53,517 |
+| CSS | 34,184 |
 | Python | 29,922 |
-| CSS | 27,054 |
-| JavaScript | 12,155 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 148,222 | 148,423 |
+| `Omi-ERP` | 228,275 | 228,588 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
@@ -46,15 +46,15 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 376,121 |
-| JSON | 254,662 |
-| Markdown | 52,772 |
+| TypeScript | 399,104 |
+| JSON | 254,774 |
+| JavaScript | 60,346 |
+| Markdown | 53,517 |
+| CSS | 34,184 |
 | Python | 29,922 |
-| CSS | 27,054 |
-| JavaScript | 12,155 |
 | Bourne Shell | 8,094 |
+| HTML | 6,232 |
 | SQL | 5,558 |
-| HTML | 5,292 |
 | PowerShell | 4,802 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
@@ -62,18 +62,18 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | CSV | 320 |
 | SVG | 276 |
 | Bourne Again Shell | 240 |
-| YAML | 193 |
+| YAML | 235 |
 | DOS Batch | 135 |
 | TOML | 94 |
 | INI | 52 |
+| Dockerfile | 37 |
 | Mako | 18 |
-| Dockerfile | 15 |
 | Text | 12 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
-| `Omi-ERP` | 148,222 | 148,423 |
+| `Omi-ERP` | 228,275 | 228,588 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
