@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 21  |  **Engineering LOC:** 609,286  |  **Total LOC:** 864,060 (incl config/data)  |  **Sync:** 2026-04-23 01:44 UTC
+**Repositories:** 22  |  **Engineering LOC:** 642,827  |  **Total LOC:** 898,556 (incl config/data)  |  **Sync:** 2026-04-24 01:30 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 399,104 |
-| JSON | 254,774 |
-| JavaScript | 60,346 |
-| Markdown | 53,517 |
-| CSS | 34,184 |
+| TypeScript | 405,130 |
+| JSON | 255,729 |
+| JavaScript | 60,401 |
+| Markdown | 54,533 |
+| CSS | 34,335 |
 | Python | 29,922 |
 
 #### Technical Depth by Repository
@@ -46,28 +46,35 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 399,104 |
-| JSON | 254,774 |
-| JavaScript | 60,346 |
-| Markdown | 53,517 |
-| CSS | 34,184 |
+| TypeScript | 405,130 |
+| JSON | 255,729 |
+| JavaScript | 60,401 |
+| Markdown | 54,533 |
+| CSS | 34,335 |
 | Python | 29,922 |
-| Bourne Shell | 8,094 |
-| HTML | 6,232 |
-| SQL | 5,558 |
+| Bourne Shell | 10,284 |
+| Kotlin | 9,824 |
+| XML | 7,359 |
+| HTML | 6,929 |
+| SQL | 5,720 |
 | PowerShell | 4,802 |
+| Java | 4,347 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
+| Swift | 1,129 |
 | Rust | 984 |
+| YAML | 362 |
+| Gradle | 345 |
 | CSV | 320 |
-| SVG | 276 |
+| SVG | 281 |
 | Bourne Again Shell | 240 |
-| YAML | 235 |
-| DOS Batch | 135 |
+| DOS Batch | 194 |
 | TOML | 94 |
-| INI | 52 |
-| Dockerfile | 37 |
+| INI | 62 |
+| Dockerfile | 41 |
+| Properties | 19 |
 | Mako | 18 |
+| ProGuard | 16 |
 | Text | 12 |
 
 #### Full Repository Index
@@ -79,6 +86,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
 | `copper-elf` | 34,178 | 203,489 |
+| `AssetLens` | 33,541 | 34,496 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
