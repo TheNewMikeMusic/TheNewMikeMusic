@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 22  |  **Engineering LOC:** 644,158  |  **Total LOC:** 899,935 (incl config/data)  |  **Sync:** 2026-05-01 02:00 UTC
+**Repositories:** 23  |  **Engineering LOC:** 658,038  |  **Total LOC:** 913,919 (incl config/data)  |  **Sync:** 2026-05-02 01:49 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 406,322 |
-| JSON | 255,777 |
-| JavaScript | 60,478 |
-| Markdown | 54,595 |
-| CSS | 34,335 |
+| TypeScript | 419,413 |
+| JSON | 255,881 |
+| JavaScript | 60,498 |
+| Markdown | 54,787 |
+| CSS | 34,880 |
 | Python | 29,922 |
 
 #### Technical Depth by Repository
@@ -46,11 +46,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 406,322 |
-| JSON | 255,777 |
-| JavaScript | 60,478 |
-| Markdown | 54,595 |
-| CSS | 34,335 |
+| TypeScript | 419,413 |
+| JSON | 255,881 |
+| JavaScript | 60,498 |
+| Markdown | 54,787 |
+| CSS | 34,880 |
 | Python | 29,922 |
 | Bourne Shell | 10,284 |
 | Kotlin | 9,824 |
@@ -63,7 +63,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Fish Shell | 1,714 |
 | Swift | 1,129 |
 | Rust | 984 |
-| YAML | 362 |
+| YAML | 394 |
 | Gradle | 345 |
 | CSV | 320 |
 | SVG | 281 |
@@ -93,6 +93,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Maclock` | 19,844 | 19,915 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
+| `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `Hotpot-Records` | 11,507 | 11,670 |
 | `openclaw-backup` | 11,413 | 13,004 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
