@@ -19,26 +19,26 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 25  |  **Engineering LOC:** 719,960  |  **Total LOC:** 992,302 (incl config/data)  |  **Sync:** 2026-05-25 02:29 UTC
+**Repositories:** 25  |  **Engineering LOC:** 790,341  |  **Total LOC:** 1,096,810 (incl config/data)  |  **Sync:** 2026-05-26 02:09 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 428,911 |
-| JSON | 272,342 |
-| Markdown | 80,457 |
-| JavaScript | 61,617 |
-| CSS | 35,567 |
+| TypeScript | 433,431 |
+| JSON | 306,469 |
+| Markdown | 143,456 |
+| JavaScript | 63,943 |
+| CSS | 35,827 |
 | Python | 30,602 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 228,275 | 228,588 |
+| `hotpot-rights-capital` | 81,305 | 115,496 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
-| `tbt-paper-terminal` | 36,405 | 36,496 |
 
 <details>
 <summary>More details</summary>
@@ -46,13 +46,13 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 428,911 |
-| JSON | 272,342 |
-| Markdown | 80,457 |
-| JavaScript | 61,617 |
-| CSS | 35,567 |
+| TypeScript | 433,431 |
+| JSON | 306,469 |
+| Markdown | 143,456 |
+| JavaScript | 63,943 |
+| CSS | 35,827 |
 | Python | 30,602 |
-| HTML | 30,523 |
+| HTML | 30,571 |
 | Bourne Shell | 10,284 |
 | Kotlin | 9,824 |
 | XML | 7,359 |
@@ -61,9 +61,9 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Java | 4,347 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
+| SVG | 1,162 |
 | Swift | 1,129 |
 | Rust | 984 |
-| SVG | 934 |
 | YAML | 415 |
 | Gradle | 345 |
 | CSV | 320 |
@@ -81,6 +81,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 228,275 | 228,588 |
+| `hotpot-rights-capital` | 81,305 | 115,496 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
@@ -97,7 +98,6 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `Hotpot-Records` | 11,507 | 11,670 |
 | `openclaw-backup` | 11,413 | 13,004 |
-| `hotpot-rights-capital` | 10,924 | 10,988 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
