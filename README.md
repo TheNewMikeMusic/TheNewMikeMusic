@@ -19,23 +19,23 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 25  |  **Engineering LOC:** 790,341  |  **Total LOC:** 1,096,810 (incl config/data)  |  **Sync:** 2026-05-26 02:09 UTC
+**Repositories:** 25  |  **Engineering LOC:** 799,656  |  **Total LOC:** 1,180,923 (incl config/data)  |  **Sync:** 2026-05-27 02:29 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 433,431 |
-| JSON | 306,469 |
-| Markdown | 143,456 |
-| JavaScript | 63,943 |
-| CSS | 35,827 |
+| TypeScript | 440,378 |
+| JSON | 381,267 |
+| Markdown | 143,558 |
+| JavaScript | 65,588 |
+| CSS | 36,448 |
 | Python | 30,602 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 228,275 | 228,588 |
-| `hotpot-rights-capital` | 81,305 | 115,496 |
+| `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
@@ -46,11 +46,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 433,431 |
-| JSON | 306,469 |
-| Markdown | 143,456 |
-| JavaScript | 63,943 |
-| CSS | 35,827 |
+| TypeScript | 440,378 |
+| JSON | 381,267 |
+| Markdown | 143,558 |
+| JavaScript | 65,588 |
+| CSS | 36,448 |
 | Python | 30,602 |
 | HTML | 30,571 |
 | Bourne Shell | 10,284 |
@@ -81,7 +81,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `Omi-ERP` | 228,275 | 228,588 |
-| `hotpot-rights-capital` | 81,305 | 115,496 |
+| `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
