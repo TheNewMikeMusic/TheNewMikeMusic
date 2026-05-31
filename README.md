@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 26  |  **Engineering LOC:** 803,869  |  **Total LOC:** 1,185,882 (incl config/data)  |  **Sync:** 2026-05-30 02:03 UTC
+**Repositories:** 26  |  **Engineering LOC:** 804,461  |  **Total LOC:** 1,186,606 (incl config/data)  |  **Sync:** 2026-05-31 02:30 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 444,194 |
-| JSON | 382,013 |
+| TypeScript | 444,774 |
+| JSON | 382,145 |
 | Markdown | 143,639 |
 | JavaScript | 65,604 |
-| CSS | 36,742 |
+| CSS | 36,754 |
 | Python | 30,602 |
 
 #### Technical Depth by Repository
@@ -46,11 +46,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 444,194 |
-| JSON | 382,013 |
+| TypeScript | 444,774 |
+| JSON | 382,145 |
 | Markdown | 143,639 |
 | JavaScript | 65,604 |
-| CSS | 36,742 |
+| CSS | 36,754 |
 | Python | 30,602 |
 | HTML | 30,571 |
 | Bourne Shell | 10,284 |
@@ -100,11 +100,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `openclaw-backup` | 11,413 | 13,004 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
+| `Lanna-Sound-Map` | 4,804 | 5,682 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
-| `Lanna-Sound-Map` | 4,213 | 4,959 |
 | `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
-| `TheNewMikeMusic` | 260 | 260 |
+| `TheNewMikeMusic` | 261 | 261 |
 </details>
 <!-- LOC_END -->
