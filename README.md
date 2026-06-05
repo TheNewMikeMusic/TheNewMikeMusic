@@ -19,14 +19,14 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 26  |  **Engineering LOC:** 818,022  |  **Total LOC:** 1,203,741 (incl config/data)  |  **Sync:** 2026-06-04 02:40 UTC
+**Repositories:** 26  |  **Engineering LOC:** 818,616  |  **Total LOC:** 1,204,335 (incl config/data)  |  **Sync:** 2026-06-05 02:16 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 455,755 |
+| TypeScript | 455,788 |
 | JSON | 385,719 |
-| Markdown | 143,830 |
+| Markdown | 144,391 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
 | Python | 30,602 |
@@ -46,9 +46,9 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 455,755 |
+| TypeScript | 455,788 |
 | JSON | 385,719 |
-| Markdown | 143,830 |
+| Markdown | 144,391 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
 | Python | 30,602 |
@@ -93,7 +93,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Maclock` | 19,844 | 19,915 |
-| `Lanna-Sound-Map` | 18,365 | 22,817 |
+| `Lanna-Sound-Map` | 18,959 | 23,411 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
