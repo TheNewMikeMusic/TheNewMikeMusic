@@ -19,14 +19,14 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 26  |  **Engineering LOC:** 818,616  |  **Total LOC:** 1,204,335 (incl config/data)  |  **Sync:** 2026-06-10 02:15 UTC
+**Repositories:** 27  |  **Engineering LOC:** 827,966  |  **Total LOC:** 1,218,173 (incl config/data)  |  **Sync:** 2026-06-11 02:38 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | TypeScript | 455,788 |
-| JSON | 385,719 |
-| Markdown | 144,391 |
+| JSON | 390,207 |
+| Markdown | 144,426 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
 | Python | 30,602 |
@@ -47,25 +47,25 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Language | LOC |
 | :--- | :--- |
 | TypeScript | 455,788 |
-| JSON | 385,719 |
-| Markdown | 144,391 |
+| JSON | 390,207 |
+| Markdown | 144,426 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
 | Python | 30,602 |
 | HTML | 30,571 |
 | Bourne Shell | 10,389 |
+| Swift | 10,256 |
 | Kotlin | 9,824 |
-| XML | 7,689 |
+| XML | 7,802 |
 | SQL | 5,720 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
 | SVG | 1,227 |
-| Swift | 1,129 |
 | Rust | 984 |
+| YAML | 490 |
 | Gradle | 452 |
-| YAML | 415 |
 | CSV | 320 |
 | DOS Batch | 265 |
 | Bourne Again Shell | 240 |
@@ -99,6 +99,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `Hotpot-Records` | 11,507 | 11,670 |
 | `openclaw-backup` | 11,413 | 13,004 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 9,350 | 13,838 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
