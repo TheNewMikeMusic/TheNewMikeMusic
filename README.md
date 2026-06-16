@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 27  |  **Engineering LOC:** 827,967  |  **Total LOC:** 1,218,174 (incl config/data)  |  **Sync:** 2026-06-15 02:43 UTC
+**Repositories:** 27  |  **Engineering LOC:** 854,074  |  **Total LOC:** 1,248,311 (incl config/data)  |  **Sync:** 2026-06-16 02:45 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | TypeScript | 455,788 |
-| JSON | 390,207 |
-| Markdown | 144,427 |
+| JSON | 394,237 |
+| Markdown | 144,589 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
-| Python | 30,602 |
+| Swift | 36,177 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -47,14 +47,14 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Language | LOC |
 | :--- | :--- |
 | TypeScript | 455,788 |
-| JSON | 390,207 |
-| Markdown | 144,427 |
+| JSON | 394,237 |
+| Markdown | 144,589 |
 | JavaScript | 66,879 |
 | CSS | 37,113 |
+| Swift | 36,177 |
 | Python | 30,602 |
 | HTML | 30,571 |
-| Bourne Shell | 10,389 |
-| Swift | 10,256 |
+| Bourne Shell | 10,410 |
 | Kotlin | 9,824 |
 | XML | 7,802 |
 | SQL | 5,720 |
@@ -64,7 +64,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Fish Shell | 1,714 |
 | SVG | 1,227 |
 | Rust | 984 |
-| YAML | 490 |
+| YAML | 493 |
 | Gradle | 452 |
 | CSV | 320 |
 | DOS Batch | 265 |
@@ -88,6 +88,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `tbt-paper-terminal` | 36,405 | 36,496 |
 | `Gastly` | 35,859 | 35,928 |
 | `copper-elf` | 35,501 | 204,860 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 35,457 | 43,975 |
 | `AssetLens` | 33,541 | 34,496 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
@@ -99,7 +100,6 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `Hotpot-Records` | 11,507 | 11,670 |
 | `openclaw-backup` | 11,413 | 13,004 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 9,350 | 13,838 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
 | `procurement-sync-assistant` | 4,318 | 4,418 |
