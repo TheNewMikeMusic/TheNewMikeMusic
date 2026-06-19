@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 27  |  **Engineering LOC:** 854,074  |  **Total LOC:** 1,248,311 (incl config/data)  |  **Sync:** 2026-06-18 02:39 UTC
+**Repositories:** 27  |  **Engineering LOC:** 866,084  |  **Total LOC:** 1,260,324 (incl config/data)  |  **Sync:** 2026-06-19 02:55 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 455,788 |
-| JSON | 394,237 |
-| Markdown | 144,589 |
+| TypeScript | 462,168 |
+| JSON | 394,240 |
+| Markdown | 145,208 |
 | JavaScript | 66,879 |
-| CSS | 37,113 |
+| CSS | 41,975 |
 | Swift | 36,177 |
 
 #### Technical Depth by Repository
@@ -46,11 +46,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| TypeScript | 455,788 |
-| JSON | 394,237 |
-| Markdown | 144,589 |
+| TypeScript | 462,168 |
+| JSON | 394,240 |
+| Markdown | 145,208 |
 | JavaScript | 66,879 |
-| CSS | 37,113 |
+| CSS | 41,975 |
 | Swift | 36,177 |
 | Python | 30,602 |
 | HTML | 30,571 |
@@ -62,7 +62,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Java | 4,421 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
-| SVG | 1,227 |
+| SVG | 1,376 |
 | Rust | 984 |
 | YAML | 493 |
 | Gradle | 452 |
@@ -90,6 +90,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `copper-elf` | 35,501 | 204,860 |
 | `Lanna-Sound-Map-Native-iOS-V2` | 35,457 | 43,975 |
 | `AssetLens` | 33,541 | 34,496 |
+| `Hotpot-Records` | 23,517 | 23,683 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
@@ -98,7 +99,6 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
-| `Hotpot-Records` | 11,507 | 11,670 |
 | `openclaw-backup` | 11,413 | 13,004 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
