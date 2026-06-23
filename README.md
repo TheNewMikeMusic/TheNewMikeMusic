@@ -19,26 +19,26 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 27  |  **Engineering LOC:** 866,084  |  **Total LOC:** 1,260,324 (incl config/data)  |  **Sync:** 2026-06-22 02:44 UTC
+**Repositories:** 28  |  **Engineering LOC:** 1,559,524  |  **Total LOC:** 1,958,659 (incl config/data)  |  **Sync:** 2026-06-23 02:11 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
+| HTML | 713,936 |
 | TypeScript | 462,168 |
-| JSON | 394,240 |
-| Markdown | 145,208 |
+| JSON | 399,135 |
+| Markdown | 150,502 |
 | JavaScript | 66,879 |
 | CSS | 41,975 |
-| Swift | 36,177 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
+| `ai-xiaowu` | 693,440 | 698,335 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
-| `artisthub-platform` | 37,682 | 40,059 |
 
 <details>
 <summary>More details</summary>
@@ -46,14 +46,14 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
+| HTML | 713,936 |
 | TypeScript | 462,168 |
-| JSON | 394,240 |
-| Markdown | 145,208 |
+| JSON | 399,135 |
+| Markdown | 150,502 |
 | JavaScript | 66,879 |
 | CSS | 41,975 |
 | Swift | 36,177 |
-| Python | 30,602 |
-| HTML | 30,571 |
+| Python | 35,263 |
 | Bourne Shell | 10,410 |
 | Kotlin | 9,824 |
 | XML | 7,802 |
@@ -64,22 +64,23 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Fish Shell | 1,714 |
 | SVG | 1,376 |
 | Rust | 984 |
-| YAML | 493 |
+| YAML | 583 |
 | Gradle | 452 |
 | CSV | 320 |
 | DOS Batch | 265 |
 | Bourne Again Shell | 240 |
 | TOML | 94 |
 | INI | 62 |
-| Dockerfile | 41 |
+| Dockerfile | 50 |
+| Text | 33 |
 | Properties | 28 |
 | Mako | 18 |
 | ProGuard | 16 |
-| Text | 12 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
+| `ai-xiaowu` | 693,440 | 698,335 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
