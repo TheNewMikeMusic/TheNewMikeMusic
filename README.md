@@ -19,12 +19,12 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 28  |  **Engineering LOC:** 1,607,198  |  **Total LOC:** 2,218,036 (incl config/data)  |  **Sync:** 2026-06-26 02:15 UTC
+**Repositories:** 29  |  **Engineering LOC:** 1,607,405  |  **Total LOC:** 2,218,243 (incl config/data)  |  **Sync:** 2026-06-27 02:10 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| HTML | 713,948 |
+| HTML | 714,074 |
 | JSON | 610,838 |
 | TypeScript | 469,023 |
 | Markdown | 154,641 |
@@ -46,14 +46,14 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| HTML | 713,948 |
+| HTML | 714,074 |
 | JSON | 610,838 |
 | TypeScript | 469,023 |
 | Markdown | 154,641 |
 | JavaScript | 67,396 |
 | Swift | 55,305 |
 | Python | 47,089 |
-| CSS | 46,497 |
+| CSS | 46,578 |
 | Bourne Shell | 10,856 |
 | Kotlin | 9,824 |
 | XML | 7,825 |
@@ -108,5 +108,6 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
 | `TheNewMikeMusic` | 263 | 263 |
+| `Lanna-Sound-Map-TestFlight-Pages` | 207 | 207 |
 </details>
 <!-- LOC_END -->
