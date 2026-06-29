@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 29  |  **Engineering LOC:** 1,607,412  |  **Total LOC:** 2,218,250 (incl config/data)  |  **Sync:** 2026-06-28 02:31 UTC
+**Repositories:** 29  |  **Engineering LOC:** 1,612,614  |  **Total LOC:** 2,238,482 (incl config/data)  |  **Sync:** 2026-06-29 02:31 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,080 |
-| JSON | 610,838 |
+| HTML | 714,212 |
+| JSON | 625,868 |
 | TypeScript | 469,023 |
-| Markdown | 154,642 |
-| JavaScript | 67,396 |
-| Swift | 55,305 |
+| Markdown | 155,055 |
+| JavaScript | 70,066 |
+| Swift | 56,488 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 59,608 | 74,367 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 64,810 | 94,599 |
 
 <details>
 <summary>More details</summary>
@@ -46,17 +46,17 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,080 |
-| JSON | 610,838 |
+| HTML | 714,212 |
+| JSON | 625,868 |
 | TypeScript | 469,023 |
-| Markdown | 154,642 |
-| JavaScript | 67,396 |
-| Swift | 55,305 |
-| Python | 47,089 |
-| CSS | 46,578 |
-| Bourne Shell | 10,856 |
+| Markdown | 155,055 |
+| JavaScript | 70,066 |
+| Swift | 56,488 |
+| Python | 47,298 |
+| CSS | 46,659 |
+| Bourne Shell | 11,348 |
 | Kotlin | 9,824 |
-| XML | 7,825 |
+| XML | 7,847 |
 | SQL | 5,825 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
@@ -84,7 +84,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 59,608 | 74,367 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 64,810 | 94,599 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
