@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 30  |  **Engineering LOC:** 1,645,350  |  **Total LOC:** 2,292,584 (incl config/data)  |  **Sync:** 2026-07-07 02:04 UTC
+**Repositories:** 30  |  **Engineering LOC:** 1,649,484  |  **Total LOC:** 2,296,819 (incl config/data)  |  **Sync:** 2026-07-08 01:45 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,220 |
-| JSON | 647,234 |
+| JSON | 647,335 |
 | TypeScript | 469,363 |
-| Markdown | 158,549 |
+| Markdown | 158,884 |
+| Swift | 77,602 |
 | JavaScript | 76,786 |
-| Swift | 75,819 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -37,7 +37,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `ai-xiaowu` | 716,849 | 927,206 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 80,630 | 131,641 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 82,698 | 133,709 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 
 <details>
@@ -47,24 +47,24 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,220 |
-| JSON | 647,234 |
+| JSON | 647,335 |
 | TypeScript | 469,363 |
-| Markdown | 158,549 |
+| Markdown | 158,884 |
+| Swift | 77,602 |
 | JavaScript | 76,786 |
-| Swift | 75,819 |
 | Python | 48,336 |
 | CSS | 46,659 |
-| Bourne Shell | 12,795 |
+| Bourne Shell | 14,223 |
 | Kotlin | 9,824 |
-| XML | 7,944 |
+| XML | 8,383 |
 | SQL | 5,825 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
-| SVG | 1,566 |
+| SVG | 1,698 |
 | Rust | 984 |
-| YAML | 732 |
+| YAML | 749 |
 | Gradle | 452 |
 | CSV | 320 |
 | DOS Batch | 265 |
@@ -83,7 +83,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `ai-xiaowu` | 716,849 | 927,206 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 80,630 | 131,641 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 82,698 | 133,709 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
@@ -97,8 +97,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Lanna-Sound-Map` | 18,974 | 23,426 |
+| `PicFlow` | 16,855 | 17,100 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
-| `PicFlow` | 14,789 | 14,933 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `openclaw-backup` | 11,413 | 13,004 |
