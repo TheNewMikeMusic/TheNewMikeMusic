@@ -19,14 +19,14 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 30  |  **Engineering LOC:** 1,657,012  |  **Total LOC:** 2,309,832 (incl config/data)  |  **Sync:** 2026-07-19 01:43 UTC
+**Repositories:** 30  |  **Engineering LOC:** 1,657,989  |  **Total LOC:** 2,310,818 (incl config/data)  |  **Sync:** 2026-07-20 01:58 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,220 |
-| JSON | 652,820 |
-| TypeScript | 469,363 |
+| JSON | 652,829 |
+| TypeScript | 469,325 |
 | Markdown | 159,413 |
 | Swift | 79,918 |
 | JavaScript | 77,197 |
@@ -47,13 +47,13 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,220 |
-| JSON | 652,820 |
-| TypeScript | 469,363 |
+| JSON | 652,829 |
+| TypeScript | 469,325 |
 | Markdown | 159,413 |
 | Swift | 79,918 |
 | JavaScript | 77,197 |
 | Python | 50,046 |
-| CSS | 46,659 |
+| CSS | 47,674 |
 | Bourne Shell | 16,693 |
 | Kotlin | 9,824 |
 | XML | 8,394 |
@@ -92,7 +92,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Gastly` | 35,859 | 35,928 |
 | `copper-elf` | 35,501 | 204,860 |
 | `AssetLens` | 33,541 | 34,496 |
-| `Hotpot-Records` | 23,630 | 23,796 |
+| `Hotpot-Records` | 24,607 | 24,782 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `Maclock` | 21,951 | 22,022 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
