@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 31  |  **Engineering LOC:** 1,811,363  |  **Total LOC:** 2,466,151 (incl config/data)  |  **Sync:** 2026-08-01 01:51 UTC
+**Repositories:** 32  |  **Engineering LOC:** 1,879,196  |  **Total LOC:** 2,536,269 (incl config/data)  |  **Sync:** 2026-08-02 01:48 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,539 |
-| JSON | 654,788 |
-| TypeScript | 556,557 |
-| Markdown | 168,945 |
+| HTML | 714,566 |
+| JSON | 657,073 |
+| TypeScript | 556,573 |
+| Markdown | 173,678 |
+| JavaScript | 113,955 |
 | Swift | 105,558 |
-| JavaScript | 78,054 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -46,24 +46,25 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,539 |
-| JSON | 654,788 |
-| TypeScript | 556,557 |
-| Markdown | 168,945 |
+| HTML | 714,566 |
+| JSON | 657,073 |
+| TypeScript | 556,573 |
+| Markdown | 173,678 |
+| JavaScript | 113,955 |
 | Swift | 105,558 |
-| JavaScript | 78,054 |
-| CSS | 54,646 |
+| CSS | 64,248 |
 | Python | 52,264 |
-| Bourne Shell | 26,304 |
-| SQL | 15,942 |
+| Bourne Shell | 27,664 |
+| SQL | 15,948 |
 | Kotlin | 9,824 |
+| JSX | 9,726 |
 | XML | 8,221 |
+| YAML | 6,863 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
 | zsh | 3,410 |
+| SVG | 2,527 |
 | Fish Shell | 1,714 |
-| SVG | 1,709 |
-| YAML | 1,289 |
 | Rust | 984 |
 | Gradle | 452 |
 | CSV | 320 |
@@ -72,8 +73,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Dockerfile | 246 |
 | TOML | 241 |
 | make | 204 |
+| Text | 120 |
 | INI | 62 |
-| Text | 50 |
 | Properties | 28 |
 | Mako | 18 |
 | ProGuard | 16 |
@@ -89,6 +90,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Lanna-Sound-Map-Native-iOS-V2` | 88,622 | 145,118 |
 | `PicFlow` | 76,543 | 78,523 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
+| `Tool-Atlas` | 67,832 | 70,117 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
 | `artisthub-platform` | 37,682 | 40,059 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
@@ -111,7 +113,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `DIT-ingest` | 2,101 | 2,247 |
 | `donenotes-meeting` | 2,038 | 2,107 |
 | `dance_parser` | 1,243 | 1,243 |
-| `TheNewMikeMusic` | 267 | 267 |
+| `TheNewMikeMusic` | 268 | 268 |
 | `Lanna-Sound-Map-TestFlight-Pages` | 217 | 217 |
 </details>
 <!-- LOC_END -->
