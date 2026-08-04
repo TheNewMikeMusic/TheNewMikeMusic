@@ -19,23 +19,23 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 32  |  **Engineering LOC:** 2,052,108  |  **Total LOC:** 2,709,733 (incl config/data)  |  **Sync:** 2026-08-03 01:50 UTC
+**Repositories:** 32  |  **Engineering LOC:** 2,097,401  |  **Total LOC:** 2,755,537 (incl config/data)  |  **Sync:** 2026-08-04 01:25 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,579 |
-| JSON | 657,625 |
+| HTML | 714,654 |
+| JSON | 658,136 |
 | TypeScript | 556,776 |
-| JavaScript | 277,190 |
-| Markdown | 175,734 |
+| JavaScript | 321,455 |
+| Markdown | 176,356 |
 | Swift | 106,551 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 238,041 | 240,872 |
+| `Tool-Atlas` | 283,334 | 286,676 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 95,288 | 95,512 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
@@ -46,31 +46,31 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,579 |
-| JSON | 657,625 |
+| HTML | 714,654 |
+| JSON | 658,136 |
 | TypeScript | 556,776 |
-| JavaScript | 277,190 |
-| Markdown | 175,734 |
+| JavaScript | 321,455 |
+| Markdown | 176,356 |
 | Swift | 106,551 |
-| CSS | 67,860 |
+| CSS | 67,980 |
 | Python | 52,312 |
 | Bourne Shell | 28,778 |
 | SQL | 15,948 |
-| JSX | 10,909 |
+| JSX | 10,980 |
 | Kotlin | 9,824 |
-| XML | 8,436 |
+| XML | 8,462 |
 | YAML | 6,870 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
 | zsh | 3,410 |
-| SVG | 2,622 |
+| SVG | 2,734 |
 | Fish Shell | 1,714 |
 | Rust | 984 |
 | Gradle | 452 |
 | CSV | 320 |
 | Bourne Again Shell | 270 |
 | DOS Batch | 265 |
-| Text | 255 |
+| Text | 257 |
 | Dockerfile | 246 |
 | TOML | 241 |
 | make | 207 |
@@ -84,7 +84,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 238,041 | 240,872 |
+| `Tool-Atlas` | 283,334 | 286,676 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 95,288 | 95,512 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
