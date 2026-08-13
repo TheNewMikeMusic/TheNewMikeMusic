@@ -19,23 +19,23 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 32  |  **Engineering LOC:** 2,133,822  |  **Total LOC:** 2,796,235 (incl config/data)  |  **Sync:** 2026-08-12 01:03 UTC
+**Repositories:** 32  |  **Engineering LOC:** 2,183,648  |  **Total LOC:** 2,854,866 (incl config/data)  |  **Sync:** 2026-08-13 01:05 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,670 |
-| JSON | 662,413 |
+| JSON | 671,218 |
 | TypeScript | 556,776 |
-| JavaScript | 352,717 |
-| Markdown | 178,377 |
+| JavaScript | 400,203 |
+| Markdown | 179,451 |
 | Swift | 106,551 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 319,755 | 327,374 |
+| `Tool-Atlas` | 369,581 | 386,005 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 95,288 | 95,512 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
@@ -47,18 +47,18 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Language | LOC |
 | :--- | :--- |
 | HTML | 714,670 |
-| JSON | 662,413 |
+| JSON | 671,218 |
 | TypeScript | 556,776 |
-| JavaScript | 352,717 |
-| Markdown | 178,377 |
+| JavaScript | 400,203 |
+| Markdown | 179,451 |
 | Swift | 106,551 |
-| CSS | 69,063 |
+| CSS | 69,496 |
 | Python | 52,825 |
 | Bourne Shell | 28,778 |
 | SQL | 15,948 |
-| JSX | 12,195 |
+| JSX | 12,958 |
 | Kotlin | 9,824 |
-| XML | 8,488 |
+| XML | 8,553 |
 | YAML | 6,870 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
@@ -68,7 +68,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Rust | 984 |
 | Gradle | 452 |
 | CSV | 320 |
-| Text | 298 |
+| Text | 303 |
 | Bourne Again Shell | 270 |
 | DOS Batch | 265 |
 | Dockerfile | 246 |
@@ -84,7 +84,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 319,755 | 327,374 |
+| `Tool-Atlas` | 369,581 | 386,005 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 95,288 | 95,512 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
