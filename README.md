@@ -19,17 +19,17 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 32  |  **Engineering LOC:** 2,243,470  |  **Total LOC:** 2,933,488 (incl config/data)  |  **Sync:** 2026-09-08 02:01 UTC
+**Repositories:** 33  |  **Engineering LOC:** 2,261,356  |  **Total LOC:** 2,961,346 (incl config/data)  |  **Sync:** 2026-09-09 02:06 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,672 |
-| JSON | 690,018 |
+| HTML | 714,875 |
+| JSON | 699,990 |
 | TypeScript | 568,489 |
-| JavaScript | 438,775 |
-| Markdown | 183,196 |
-| Swift | 106,551 |
+| JavaScript | 444,931 |
+| Markdown | 185,471 |
+| Swift | 107,937 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Tool-Atlas` | 411,517 | 446,677 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 113,174 | 113,462 |
-| `hotpot-rights-capital` | 90,620 | 199,609 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 91,297 | 148,439 |
 
 <details>
 <summary>More details</summary>
@@ -46,20 +46,20 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| HTML | 714,672 |
-| JSON | 690,018 |
+| HTML | 714,875 |
+| JSON | 699,990 |
 | TypeScript | 568,489 |
-| JavaScript | 438,775 |
-| Markdown | 183,196 |
-| Swift | 106,551 |
-| CSS | 70,102 |
-| Python | 52,825 |
-| Bourne Shell | 29,092 |
+| JavaScript | 444,931 |
+| Markdown | 185,471 |
+| Swift | 107,937 |
+| CSS | 74,826 |
+| Python | 53,230 |
+| Bourne Shell | 29,902 |
 | SQL | 19,384 |
-| JSX | 13,757 |
+| JSX | 15,656 |
 | Kotlin | 9,824 |
 | XML | 8,566 |
-| YAML | 6,872 |
+| YAML | 6,873 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
 | zsh | 3,410 |
@@ -67,13 +67,13 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | Fish Shell | 1,714 |
 | Rust | 984 |
 | CSV | 667 |
-| Text | 577 |
+| Text | 578 |
 | Gradle | 452 |
 | Bourne Again Shell | 270 |
 | DOS Batch | 265 |
 | Dockerfile | 247 |
 | TOML | 239 |
-| make | 207 |
+| make | 233 |
 | INI | 62 |
 | Properties | 28 |
 | Mako | 18 |
@@ -87,8 +87,8 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Tool-Atlas` | 411,517 | 446,677 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 113,174 | 113,462 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 91,297 | 148,439 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
-| `Lanna-Sound-Map-Native-iOS-V2` | 88,622 | 145,118 |
 | `PicFlow` | 79,244 | 81,230 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
@@ -104,6 +104,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `undefinedesign-erp` | 20,201 | 20,392 |
 | `Lanna-Sound-Map` | 18,974 | 23,426 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
+| `MQSL` | 15,211 | 24,537 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
 | `Ekavo-Persona-Studio` | 13,880 | 13,984 |
 | `openclaw-backup` | 11,413 | 13,004 |
