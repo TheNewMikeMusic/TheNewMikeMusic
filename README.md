@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 34  |  **Engineering LOC:** 2,358,669  |  **Total LOC:** 3,220,761 (incl config/data)  |  **Sync:** 2026-09-13 02:01 UTC
+**Repositories:** 34  |  **Engineering LOC:** 2,359,434  |  **Total LOC:** 3,221,526 (incl config/data)  |  **Sync:** 2026-09-14 02:18 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
 | JSON | 862,092 |
 | HTML | 715,202 |
-| TypeScript | 622,358 |
-| JavaScript | 463,721 |
-| Markdown | 190,471 |
+| TypeScript | 622,683 |
+| JavaScript | 464,028 |
+| Markdown | 190,475 |
 | Swift | 107,937 |
 
 #### Technical Depth by Repository
@@ -38,7 +38,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Tool-Atlas` | 411,517 | 446,677 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 113,523 | 113,813 |
-| `AKARA` | 96,814 | 258,914 |
+| `AKARA` | 97,579 | 259,679 |
 
 <details>
 <summary>More details</summary>
@@ -48,11 +48,11 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | :--- | :--- |
 | JSON | 862,092 |
 | HTML | 715,202 |
-| TypeScript | 622,358 |
-| JavaScript | 463,721 |
-| Markdown | 190,471 |
+| TypeScript | 622,683 |
+| JavaScript | 464,028 |
+| Markdown | 190,475 |
 | Swift | 107,937 |
-| CSS | 90,819 |
+| CSS | 90,948 |
 | Python | 54,410 |
 | Bourne Shell | 30,023 |
 | SQL | 20,179 |
@@ -87,7 +87,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Tool-Atlas` | 411,517 | 446,677 |
 | `Omi-ERP` | 228,275 | 228,588 |
 | `akara-art` | 113,523 | 113,813 |
-| `AKARA` | 96,814 | 258,914 |
+| `AKARA` | 97,579 | 259,679 |
 | `Lanna-Sound-Map-Native-iOS-V2` | 91,445 | 148,587 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `PicFlow` | 79,244 | 81,230 |
