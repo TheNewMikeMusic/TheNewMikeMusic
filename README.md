@@ -19,16 +19,16 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 35  |  **Engineering LOC:** 2,429,369  |  **Total LOC:** 3,672,398 (incl config/data)  |  **Sync:** 2026-10-17 02:05 UTC
+**Repositories:** 35  |  **Engineering LOC:** 2,435,045  |  **Total LOC:** 3,678,508 (incl config/data)  |  **Sync:** 2026-10-18 02:04 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| JSON | 1,243,029 |
+| JSON | 1,243,463 |
 | HTML | 719,811 |
-| TypeScript | 622,683 |
-| JavaScript | 464,429 |
-| Markdown | 197,955 |
+| TypeScript | 623,995 |
+| JavaScript | 464,507 |
+| Markdown | 197,982 |
 | Swift | 148,897 |
 
 #### Technical Depth by Repository
@@ -46,13 +46,13 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| JSON | 1,243,029 |
+| JSON | 1,243,463 |
 | HTML | 719,811 |
-| TypeScript | 622,683 |
-| JavaScript | 464,429 |
-| Markdown | 197,955 |
+| TypeScript | 623,995 |
+| JavaScript | 464,507 |
+| Markdown | 197,982 |
 | Swift | 148,897 |
-| CSS | 90,948 |
+| CSS | 95,201 |
 | Python | 59,269 |
 | Bourne Shell | 29,337 |
 | SQL | 20,179 |
@@ -63,7 +63,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | YAML | 7,148 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
-| SVG | 3,525 |
+| SVG | 3,531 |
 | zsh | 3,410 |
 | Fish Shell | 1,714 |
 | CSV | 1,057 |
@@ -99,7 +99,7 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 | `Gastly` | 35,859 | 35,928 |
 | `copper-elf` | 35,501 | 204,860 |
 | `AssetLens` | 33,541 | 34,496 |
-| `Hotpot-Records` | 24,607 | 24,782 |
+| `Hotpot-Records` | 30,283 | 30,892 |
 | `afmicrofiber` | 22,958 | 56,790 |
 | `Maclock` | 21,951 | 22,022 |
 | `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
