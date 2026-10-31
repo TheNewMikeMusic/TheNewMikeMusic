@@ -19,26 +19,26 @@ Fintech / E-commerce / Digital Marketplaces / Trading Systems
 <!-- LOC_START -->
 LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 
-**Repositories:** 35  |  **Engineering LOC:** 2,438,004  |  **Total LOC:** 3,681,467 (incl config/data)  |  **Sync:** 2026-10-30 03:28 UTC
+**Repositories:** 35  |  **Engineering LOC:** 1,586,309  |  **Total LOC:** 2,631,909 (incl config/data)  |  **Sync:** 2026-10-31 03:13 UTC
 
 #### Language Distribution
 | Language | LOC |
 | :--- | :--- |
-| JSON | 1,243,463 |
-| HTML | 719,811 |
-| TypeScript | 626,954 |
-| JavaScript | 464,507 |
-| Markdown | 197,982 |
+| JSON | 1,045,600 |
+| HTML | 717,499 |
+| TypeScript | 337,960 |
+| Markdown | 161,214 |
 | Swift | 148,897 |
+| Python | 56,676 |
 
 #### Technical Depth by Repository
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 411,517 | 446,677 |
-| `Omi-ERP` | 229,026 | 229,339 |
-| `akara-art` | 113,808 | 114,098 |
-| `AKARA` | 99,502 | 261,602 |
+| `Lanna-Sound-Map-Native-iOS-V2` | 91,424 | 148,610 |
+| `hotpot-rights-capital` | 90,620 | 199,609 |
+| `PicFlow` | 79,244 | 81,230 |
+| `Ekavo-ERP` | 74,694 | 117,594 |
 
 <details>
 <summary>More details</summary>
@@ -46,69 +46,65 @@ LOC by cloc. Engineering LOC excludes lockfiles & generated assets.
 #### Full Language Breakdown
 | Language | LOC |
 | :--- | :--- |
-| JSON | 1,243,463 |
-| HTML | 719,811 |
-| TypeScript | 626,954 |
-| JavaScript | 464,507 |
-| Markdown | 197,982 |
+| JSON | 1,045,600 |
+| HTML | 717,499 |
+| TypeScript | 337,960 |
+| Markdown | 161,214 |
 | Swift | 148,897 |
-| CSS | 95,201 |
-| Python | 59,269 |
-| Bourne Shell | 29,337 |
-| SQL | 20,179 |
-| JSX | 15,656 |
-| XML | 12,477 |
+| Python | 56,676 |
+| CSS | 46,564 |
+| JavaScript | 33,629 |
+| Bourne Shell | 25,439 |
+| XML | 12,180 |
 | Kotlin | 9,824 |
-| Text | 8,724 |
-| YAML | 7,148 |
+| Text | 7,806 |
 | PowerShell | 4,802 |
 | Java | 4,421 |
-| SVG | 3,531 |
+| SQL | 3,927 |
 | zsh | 3,410 |
+| Prisma Schema | 2,158 |
+| JSX | 1,899 |
 | Fish Shell | 1,714 |
-| CSV | 1,057 |
+| SVG | 1,696 |
+| YAML | 1,331 |
 | Rust | 984 |
+| CSV | 705 |
 | Gradle | 452 |
-| TOML | 407 |
-| Dockerfile | 312 |
 | Bourne Again Shell | 270 |
 | make | 269 |
 | DOS Batch | 265 |
-| INI | 74 |
+| Dockerfile | 101 |
+| TOML | 93 |
+| INI | 62 |
 | Properties | 28 |
 | Mako | 18 |
 | ProGuard | 16 |
-| Go | 8 |
 
 #### Full Repository Index
 | Repository | Engineering LOC | Total LOC |
 | :--- | :--- | :--- |
 | `ai-xiaowu` | 716,849 | 927,206 |
-| `Tool-Atlas` | 411,517 | 446,677 |
-| `Omi-ERP` | 229,026 | 229,339 |
-| `akara-art` | 113,808 | 114,098 |
-| `AKARA` | 99,502 | 261,602 |
 | `Lanna-Sound-Map-Native-iOS-V2` | 91,424 | 148,610 |
 | `hotpot-rights-capital` | 90,620 | 199,609 |
 | `PicFlow` | 79,244 | 81,230 |
 | `Ekavo-ERP` | 74,694 | 117,594 |
 | `Soundmap` | 69,955 | 450,848 |
 | `bambu-qa-feishu-bot` | 50,995 | 67,392 |
-| `artisthub-platform` | 37,682 | 40,059 |
+| `artisthub-platform` | 38,374 | 40,751 |
 | `tbt-paper-terminal` | 36,405 | 36,496 |
-| `Gastly` | 35,859 | 35,928 |
-| `copper-elf` | 35,501 | 204,860 |
-| `AssetLens` | 33,541 | 34,496 |
+| `Gastly` | 36,003 | 36,072 |
+| `copper-elf` | 35,616 | 204,975 |
+| `AssetLens` | 33,759 | 34,714 |
 | `Hotpot-Records` | 30,283 | 30,892 |
 | `afmicrofiber` | 22,958 | 56,790 |
-| `Maclock` | 21,951 | 22,022 |
-| `fake-cigarette-bubble-toy` | 21,903 | 22,000 |
-| `undefinedesign-erp` | 20,201 | 20,392 |
+| `Maclock` | 22,097 | 22,168 |
+| `fake-cigarette-bubble-toy` | 22,050 | 22,147 |
+| `undefinedesign-erp` | 20,430 | 20,621 |
 | `Lanna-Sound-Map` | 18,974 | 23,426 |
 | `beast-china-content-ops-dashboard` | 16,269 | 16,368 |
 | `MQSL` | 15,211 | 24,537 |
 | `xfinds-cross-border-freight-comparison` | 14,441 | 17,682 |
-| `Ekavo-Persona-Studio` | 13,880 | 13,984 |
+| `Ekavo-Persona-Studio` | 14,347 | 14,451 |
 | `openclaw-backup` | 11,413 | 13,004 |
 | `ecom-asset-studio` | 7,800 | 7,860 |
 | `Tao-Archive` | 5,908 | 5,961 |
